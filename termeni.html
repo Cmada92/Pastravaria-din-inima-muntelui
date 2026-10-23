@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Termeni și condiții | Păstrăvăria – Din Inima Muntelui</title>
+
+    <meta
+        name="description"
+        content="Termenii și condițiile Păstrăvăriei – Din Inima Muntelui, Zărnești."
+    >
+
+    <!-- FONTURI -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS PRINCIPAL -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================================
+           PAGINA TERMENI
+        ========================================= */
+
+        body {
+            margin: 0;
+            background: #f3f0e7;
+            color: #063d32;
+        }
+
+        .legal-page {
+            min-height: 100vh;
+            padding: 45px 7% 100px;
+            background:
+                radial-gradient(
+                    circle at 85% 10%,
+                    rgba(118, 174, 109, .12),
+                    transparent 28%
+                ),
+                #f3f0e7;
+        }
+
+        /* NAV */
+
+        .legal-nav {
+            width: 100%;
+            max-width: 1450px;
+            margin: 0 auto 100px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .legal-logo {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+        }
+
+        .legal-logo strong {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 22px;
+            color: #063d32;
+        }
+
+        .legal-logo span {
+            margin-top: 4px;
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 6px;
+            font-weight: 700;
+            letter-spacing: 3.5px;
+
+            color: #76ae6d;
+        }
+
+        .back-home {
+            padding: 13px 20px;
+
+            border: 1px solid rgba(6, 61, 50, .16);
+            border-radius: 50px;
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 1px;
+
+            color: #063d32;
+            text-decoration: none;
+
+            transition: .25s ease;
+        }
+
+        .back-home:hover {
+            background: #063d32;
+            color: #fff;
+        }
+
+
+        /* HEADER */
+
+        .legal-header {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto 75px;
+        }
+
+        .legal-kicker {
+            display: block;
+            margin-bottom: 22px;
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 7px;
+            font-weight: 700;
+            letter-spacing: 5px;
+
+            color: #76ae6d;
+        }
+
+        .legal-header h1 {
+            margin: 0;
+
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(60px, 8vw, 125px);
+            line-height: .88;
+            letter-spacing: -5px;
+            font-weight: 500;
+
+            color: #063d32;
+        }
+
+        .legal-header h1 em {
+            color: #76ae6d;
+            font-weight: 500;
+        }
+
+        .legal-intro {
+            max-width: 650px;
+            margin: 35px 0 0;
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 14px;
+            line-height: 1.9;
+
+            color: #707971;
+        }
+
+
+        /* CONȚINUT */
+
+        .legal-content {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: 230px 1fr;
+            gap: 80px;
+
+            padding-top: 60px;
+
+            border-top: 1px solid rgba(6, 61, 50, .15);
+        }
+
+        .legal-side {
+            position: sticky;
+            top: 40px;
+            height: fit-content;
+        }
+
+        .legal-side span {
+            display: block;
+            margin-bottom: 10px;
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 7px;
+            font-weight: 700;
+            letter-spacing: 3px;
+
+            color: #76ae6d;
+        }
+
+        .legal-side strong {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 20px;
+            font-weight: 600;
+
+            color: #063d32;
+        }
+
+        .legal-text section {
+            padding-bottom: 48px;
+            margin-bottom: 48px;
+
+            border-bottom: 1px solid rgba(6, 61, 50, .09);
+        }
+
+        .legal-text section:last-child {
+            border-bottom: none;
+        }
+
+        .legal-text h2 {
+            margin: 0 0 20px;
+
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 30px;
+            font-weight: 600;
+
+            color: #063d32;
+        }
+
+        .legal-text p,
+        .legal-text li {
+            font-family: "DM Sans", sans-serif;
+            font-size: 13px;
+            line-height: 1.9;
+
+            color: #68736b;
+        }
+
+        .legal-text ul {
+            padding-left: 20px;
+        }
+
+        .legal-text a {
+            color: #063d32;
+            font-weight: 700;
+        }
+
+        .company-box {
+            margin-top: 25px;
+            padding: 25px 28px;
+
+            border: 1px solid rgba(6, 61, 50, .12);
+            border-radius: 20px;
+
+            background: rgba(255, 255, 255, .32);
+        }
+
+        .company-box p {
+            margin: 5px 0;
+        }
+
+        .company-box strong {
+            color: #063d32;
+        }
+
+
+        /* FOOTER */
+
+        .legal-footer {
+            width: 100%;
+            max-width: 1100px;
+
+            margin: 80px auto 0;
+            padding-top: 35px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+
+            border-top: 1px solid rgba(6, 61, 50, .14);
+
+            font-family: "DM Sans", sans-serif;
+        }
+
+        .legal-footer p {
+            margin: 0;
+
+            font-size: 9px;
+
+            color: #8a928b;
+        }
+
+        .legal-footer a {
+            font-size: 9px;
+            font-weight: 700;
+
+            color: #063d32;
+            text-decoration: none;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .legal-page {
+                padding: 30px 7% 70px;
+            }
+
+            .legal-nav {
+                margin-bottom: 70px;
+            }
+
+            .legal-header h1 {
+                font-size: clamp(52px, 15vw, 80px);
+                letter-spacing: -3px;
+            }
+
+            .legal-content {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .legal-side {
+                position: static;
+            }
+
+            .legal-footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<main class="legal-page">
+
+    <!-- NAV -->
+    <nav class="legal-nav">
+
+        <a href="index.html" class="legal-logo">
+            <strong>PĂSTRĂVĂRIA</strong>
+            <span>DIN INIMA MUNTELUI</span>
+        </a>
+
+        <a href="index.html" class="back-home">
+            ← ÎNAPOI LA SITE
+        </a>
+
+    </nav>
+
+
+    <!-- HEADER -->
+    <header class="legal-header">
+
+        <span class="legal-kicker">
+            INFORMAȚII LEGALE
+        </span>
+
+        <h1>
+            Termeni și
+            <em>condiții.</em>
+        </h1>
+
+        <p class="legal-intro">
+            Această pagină stabilește condițiile generale privind
+            utilizarea site-ului Păstrăvăria – Din Inima Muntelui
+            și informațiile referitoare la comenzile realizate telefonic.
+        </p>
+
+    </header>
+
+
+    <!-- CONȚINUT -->
+    <div class="legal-content">
+
+        <aside class="legal-side">
+            <span>ACTUALIZAT</span>
+            <strong>Octombrie 2026</strong>
+        </aside>
+
+
+        <div class="legal-text">
+
+            <section>
+
+                <h2>1. Despre noi</h2>
+
+                <p>
+                    Site-ul „Păstrăvăria – Din Inima Muntelui”
+                    prezintă activitatea păstrăvăriei și oferă
+                    informații despre produsele disponibile,
+                    modalitatea de comandă și ridicarea acestora.
+                </p>
+
+                <div class="company-box">
+
+                    <p>
+                        <strong>Operator:</strong>
+                        DE COMPLETAT
+                    </p>
+
+                    <p>
+                        <strong>CUI/CIF:</strong>
+                        DE COMPLETAT
+                    </p>
+
+                    <p>
+                        <strong>Sediu social:</strong>
+                        DE COMPLETAT
+                    </p>
+
+                    <p>
+                        <strong>Punct de lucru:</strong>
+                        Strada Toplița nr. 52B, Zărnești, Brașov
+                    </p>
+
+                    <p>
+                        <strong>Telefon:</strong>
+                        0741 078 941
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section>
+
+                <h2>2. Produsele prezentate</h2>
+
+                <p>
+                    Site-ul prezintă produsele disponibile în cadrul
+                    păstrăvăriei. Disponibilitatea produselor poate varia,
+                    iar informațiile afișate pe site pot fi actualizate
+                    periodic.
+                </p>
+
+                <p>
+                    Pentru confirmarea disponibilității și a cantității
+                    dorite, clientul este rugat să contacteze telefonic
+                    păstrăvăria înainte de deplasare.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>3. Prețuri</h2>
+
+                <p>
+                    Prețurile produselor sunt afișate pe site în lei.
+                    Prețul aplicabil este cel comunicat și confirmat
+                    clientului la momentul comenzii.
+                </p>
+
+                <p>
+                    În cazul modificării prețurilor, informațiile de pe
+                    site vor fi actualizate în consecință.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>4. Comenzi</h2>
+
+                <p>
+                    Comenzile se realizează telefonic la numărul
+                    <a href="tel:+40741078941">0741 078 941</a>.
+                </p>
+
+                <p>
+                    O comandă este considerată confirmată după stabilirea
+                    telefonică a produsului, cantității, disponibilității
+                    și detaliilor privind ridicarea.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>5. Ridicarea produselor</h2>
+
+                <p>
+                    Produsele comandate se ridică direct de la
+                    Păstrăvăria – Din Inima Muntelui, la punctul de lucru
+                    din Strada Toplița nr. 52B, Zărnești, Brașov,
+                    conform detaliilor stabilite la momentul comenzii.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>6. Produse perisabile</h2>
+
+                <p>
+                    Produsele comercializate pot avea caracter perisabil.
+                    Din acest motiv, anumite drepturi aplicabile în mod
+                    obișnuit contractelor la distanță pot avea excepții
+                    prevăzute de legislația în vigoare pentru produsele
+                    susceptibile a se deteriora sau expira rapid.
+                </p>
+
+                <p>
+                    Eventualele probleme privind produsul primit trebuie
+                    comunicate cât mai curând posibil, pentru a putea fi
+                    analizate în mod corespunzător.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>7. Informațiile de pe site</h2>
+
+                <p>
+                    Depunem eforturi pentru ca informațiile prezentate
+                    pe site să fie corecte și actualizate. Pot exista
+                    însă modificări privind disponibilitatea, prețurile
+                    sau alte informații comerciale.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>8. Proprietate intelectuală</h2>
+
+                <p>
+                    Textele, elementele grafice, identitatea vizuală,
+                    fotografiile și celelalte materiale originale
+                    publicate pe acest site nu pot fi copiate,
+                    reproduse sau utilizate în scop comercial fără
+                    acordul titularului drepturilor asupra acestora.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>9. Protecția datelor</h2>
+
+                <p>
+                    Informațiile referitoare la prelucrarea datelor
+                    cu caracter personal sunt disponibile în
+                    <a href="confidentialitate.html">
+                        Politica de confidențialitate
+                    </a>.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>10. Reclamații și soluționarea litigiilor</h2>
+
+                <p>
+                    Pentru orice problemă referitoare la produsele sau
+                    serviciile noastre, ne puteți contacta mai întâi
+                    telefonic pentru a încerca soluționarea situației.
+                </p>
+
+                <p>
+                    Consumatorii pot consulta informațiile furnizate de
+                    Autoritatea Națională pentru Protecția Consumatorilor.
+                </p>
+
+                <p>
+                    <a
+                        href="https://anpc.ro/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Autoritatea Națională pentru Protecția Consumatorilor ↗
+                    </a>
+                </p>
+
+                <p>
+                    <a
+                        href="https://reclamatiisal.anpc.ro/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Soluționarea Alternativă a Litigiilor – SAL ↗
+                    </a>
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>11. Modificarea termenilor</h2>
+
+                <p>
+                    Acești termeni pot fi actualizați atunci când
+                    activitatea, serviciile sau cerințele legale se
+                    modifică. Versiunea publicată pe această pagină
+                    este versiunea disponibilă utilizatorilor site-ului.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>12. Contact</h2>
+
+                <p>
+                    Pentru informații despre produse și comenzi:
+                </p>
+
+                <p>
+                    <strong>Păstrăvăria – Din Inima Muntelui</strong><br>
+                    Strada Toplița nr. 52B<br>
+                    Zărnești, Brașov<br><br>
+
+                    Telefon:
+                    <a href="tel:+40741078941">
+                        0741 078 941
+                    </a>
+                </p>
+
+            </section>
+
+        </div>
+
+    </div>
+
+
+    <footer class="legal-footer">
+
+        <p>
+            © 2026 Păstrăvăria · Din Inima Muntelui
+        </p>
+
+        <a href="index.html">
+            Înapoi la pagina principală →
+        </a>
+
+    </footer>
+
+</main>
+
+</body>
+
+</html>

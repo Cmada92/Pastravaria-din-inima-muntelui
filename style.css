@@ -1,0 +1,7177 @@
+/* =========================================================
+   RESET + GLOBAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: "DM Sans", Arial, sans-serif;
+    background: #f2efe6;
+    color: #082f26;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(2, 31, 25, .91) 0%,
+            rgba(3, 38, 30, .65) 26%,
+            rgba(3, 38, 30, .10) 55%,
+            rgba(2, 29, 23, .20) 100%
+        ),
+        url("images/hero-pastrav-wow.png") center center / cover no-repeat;
+}
+
+/* umbră jos */
+
+.hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 240px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(1, 28, 22, .75)
+        );
+
+    pointer-events: none;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    position: absolute;
+    z-index: 50;
+
+    top: 18px;
+    left: 50%;
+
+    width: min(88%, 1500px);
+
+    transform: translateX(-50%);
+}
+
+.nav-inner {
+    height: 72px;
+
+    padding: 0 18px;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    border: 1px solid rgba(185, 232, 126, .22);
+    border-radius: 26px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 45, 35, .94),
+            rgba(8, 67, 72, .78),
+            rgba(65, 91, 83, .65)
+        );
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 20px 55px rgba(0, 0, 0, .16);
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    width: fit-content;
+
+    color: #fff;
+}
+
+.logo-icon {
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid rgba(182, 232, 112, .55);
+    border-radius: 50%;
+
+    color: #b7e36d;
+
+    box-shadow:
+        inset 0 0 0 6px rgba(181, 226, 107, .025);
+}
+
+.logo-icon svg {
+    width: 31px;
+    height: 31px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text strong {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: .5px;
+}
+
+.logo-text span {
+    margin-top: 7px;
+
+    font-size: 6.5px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: rgba(255, 255, 255, .65);
+}
+
+/* =========================================================
+   DESKTOP MENU
+========================================================= */
+
+.desktop-nav {
+    display: flex;
+    align-items: center;
+
+    padding: 5px;
+
+    gap: 4px;
+
+    border: 1px solid rgba(255, 255, 255, .09);
+    border-radius: 40px;
+
+    background: rgba(1, 39, 33, .47);
+}
+
+.nav-link {
+    position: relative;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    color: rgba(255, 255, 255, .72);
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease;
+}
+
+.nav-link:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, .07);
+}
+
+.nav-link.active {
+    color: #fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, .11),
+            rgba(178, 226, 103, .06)
+        );
+}
+
+.nav-link.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 6px;
+
+    width: 26px;
+    height: 2px;
+
+    transform: translateX(-50%);
+
+    border-radius: 10px;
+
+    background: #b8e76d;
+
+    box-shadow:
+        0 0 12px rgba(184, 231, 109, .8);
+}
+
+/* =========================================================
+   NAV TELEFON
+========================================================= */
+
+.nav-order {
+    justify-self: end;
+
+    min-width: 210px;
+    height: 55px;
+
+    padding: 5px 13px 5px 7px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    border: 1px solid rgba(255, 255, 255, .24);
+    border-radius: 35px;
+
+    color: #fff;
+
+    background: rgba(255, 255, 255, .045);
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
+}
+
+.nav-order:hover {
+    transform: translateY(-2px);
+
+    background: rgba(255, 255, 255, .09);
+}
+
+.nav-order-icon {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    color: #b8e76d;
+
+    background: rgba(184, 231, 109, .09);
+
+    border: 1px solid rgba(184, 231, 109, .28);
+}
+
+.nav-order-icon svg {
+    width: 21px;
+    height: 21px;
+}
+
+.nav-order-text {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+}
+
+.nav-order-text small {
+    margin-bottom: 3px;
+
+    font-size: 6px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: rgba(255, 255, 255, .47);
+}
+
+.nav-order-text strong {
+    font-size: 12px;
+}
+
+.nav-arrow {
+    color: rgba(255, 255, 255, .75);
+
+    font-size: 15px;
+}
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-container {
+    position: relative;
+    z-index: 5;
+
+    width: min(84%, 1460px);
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    padding-top: 150px;
+    padding-bottom: 100px;
+
+    display: grid;
+    grid-template-columns: 1fr 350px;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+/* =========================================================
+   HERO LEFT
+========================================================= */
+
+.hero-copy {
+    max-width: 660px;
+}
+
+.eyebrow {
+    margin-bottom: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    color: rgba(255, 255, 255, .82);
+}
+
+.eyebrow span {
+    color: #b8e76d;
+}
+
+.hero-copy h1 {
+    max-width: 650px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(75px, 6.2vw, 118px);
+    font-weight: 600;
+
+    line-height: .79;
+
+    letter-spacing: -5px;
+
+    color: #fff;
+}
+
+.hero-copy h1 em {
+    display: block;
+
+    color: #a8da72;
+
+    font-weight: 500;
+}
+
+.description {
+    max-width: 470px;
+
+    margin-top: 30px;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, .85);
+}
+
+.price-line {
+    margin-top: 22px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 17px;
+}
+
+.price-line span {
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: rgba(255, 255, 255, .65);
+}
+
+.price-line strong {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 22px;
+
+    color: #b8e76d;
+}
+
+/* =========================================================
+   HERO BUTTON
+========================================================= */
+
+.hero-actions {
+    margin-top: 26px;
+}
+
+.order-button {
+    width: 290px;
+    height: 58px;
+
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    border-radius: 40px;
+
+    background: #f4f1e8;
+
+    color: #092f27;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.order-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, .22);
+}
+
+.order-button .phone {
+    font-size: 18px;
+}
+
+.order-button .arrow {
+    margin-left: auto;
+
+    font-size: 18px;
+
+    color: #6d7b74;
+}
+
+/* =========================================================
+   BENEFITS RIGHT
+========================================================= */
+
+.benefits {
+    justify-self: end;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 31px;
+}
+
+.benefit {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+}
+
+.benefit:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+
+    left: 28px;
+    top: 59px;
+
+    width: 1px;
+    height: 34px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(181, 228, 108, .45),
+            transparent
+        );
+}
+
+.benefit-icon {
+    width: 57px;
+    height: 57px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    border: 1px solid #a9d95e;
+
+    background: rgba(7, 55, 44, .58);
+
+    color: #b8e76d;
+
+    font-size: 20px;
+
+    box-shadow:
+        0 0 25px rgba(183, 229, 109, .10);
+}
+
+.benefit-text {
+    display: grid;
+    grid-template-columns: 28px auto;
+
+    column-gap: 10px;
+    row-gap: 2px;
+
+    min-width: 200px;
+}
+
+.benefit-text .number {
+    grid-row: 1 / span 2;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 16px;
+
+    color: #b8e76d;
+}
+
+.benefit-text strong {
+    font-size: 14px;
+
+    color: #fff;
+}
+
+.benefit-text p {
+    font-size: 11px;
+
+    color: rgba(255, 255, 255, .68);
+}
+
+/* =========================================================
+   SCROLL
+========================================================= */
+
+.scroll-indicator {
+    position: absolute;
+    z-index: 10;
+
+    left: 50%;
+    bottom: 16px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 7px;
+
+    color: #fff;
+}
+
+.scroll-indicator .mouse {
+    width: 18px;
+    height: 29px;
+
+    border: 2px solid rgba(255, 255, 255, .9);
+    border-radius: 12px;
+
+    position: relative;
+}
+
+.scroll-indicator .mouse::after {
+    content: "";
+
+    position: absolute;
+
+    width: 2px;
+    height: 6px;
+
+    top: 5px;
+    left: 6px;
+
+    border-radius: 4px;
+
+    background: #fff;
+
+    animation: scrollDot 1.8s infinite;
+}
+
+.scroll-indicator > span:nth-child(2) {
+    font-size: 6px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.scroll-indicator i {
+    width: 1px;
+    height: 35px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, .7),
+            transparent
+        );
+}
+
+@keyframes scrollDot {
+
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+}
+
+/* =========================================================
+   PĂSTRĂV VIU
+========================================================= */
+
+.fish-section {
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 145px 7% 120px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 65% 42%,
+            rgba(140, 174, 116, .09),
+            transparent 26%
+        ),
+        #f2efe6;
+
+    color: #0a332a;
+}
+
+.fish-section-inner {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.35fr)
+        minmax(320px, .65fr);
+
+    align-items: center;
+
+    gap: 100px;
+}
+
+/* =========================================================
+   FISH INTRO
+========================================================= */
+
+.fish-intro {
+    position: relative;
+
+    max-width: 850px;
+
+    z-index: 3;
+}
+
+.fish-kicker {
+    display: block;
+
+    margin-bottom: 28px;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    color: #34745f;
+}
+
+.fish-intro h2 {
+    max-width: 760px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(72px, 6vw, 110px);
+
+    font-weight: 600;
+
+    line-height: .86;
+
+    letter-spacing: -5px;
+
+    color: #0a332a;
+}
+
+.fish-intro h2 em {
+    color: #6da567;
+
+    font-weight: 500;
+}
+
+.fish-intro > p {
+    max-width: 560px;
+
+    margin-top: 35px;
+
+    font-size: 14px;
+    line-height: 1.8;
+
+    color: #667a72;
+}
+
+/* =========================================================
+   FISH FEATURES
+========================================================= */
+
+.fish-features {
+    width: min(100%, 770px);
+
+    margin-top: 55px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid rgba(8, 51, 42, .18);
+    border-bottom: 1px solid rgba(8, 51, 42, .18);
+}
+
+.fish-features > div {
+    min-height: 130px;
+
+    padding: 30px 28px 25px 0;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+}
+
+.fish-features > div + div {
+    padding-left: 30px;
+
+    border-left: 1px solid rgba(8, 51, 42, .15);
+}
+
+.fish-features span {
+    margin-bottom: 14px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 11px;
+
+    color: #75a967;
+}
+
+.fish-features strong {
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+    color: #0a332a;
+}
+
+.fish-features small {
+    font-size: 11px;
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    color: #809087;
+}
+
+.fish-features .location-address {
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: #426d5c;
+}
+
+/* =========================================================
+   FLOATING TROUT
+========================================================= */
+
+.floating-trout {
+    position: absolute;
+    z-index: 5;
+
+    width: clamp(350px, 30vw, 540px);
+
+    left: 58%;
+    top: 43%;
+
+    transform: translate(-50%, -50%);
+
+    pointer-events: none;
+}
+
+.trout-image {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+
+    filter:
+        drop-shadow(0 25px 20px rgba(6, 48, 38, .16));
+
+    animation:
+        troutFloat 5.5s ease-in-out infinite;
+}
+
+.trout-glow {
+    position: absolute;
+
+    z-index: 1;
+
+    width: 78%;
+    height: 60%;
+
+    left: 10%;
+    top: 22%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(105, 158, 100, .15),
+            transparent 70%
+        );
+
+    filter: blur(25px);
+}
+
+.trout-shadow {
+    position: absolute;
+
+    z-index: 0;
+
+    left: 22%;
+    bottom: -18px;
+
+    width: 60%;
+    height: 17px;
+
+    border-radius: 50%;
+
+    background: rgba(9, 56, 44, .10);
+
+    filter: blur(12px);
+}
+
+@keyframes troutFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(-1deg);
+    }
+
+    50% {
+        transform:
+            translateY(-13px)
+            rotate(.6deg);
+    }
+}
+
+/* =========================================================
+   PRICE CARD
+========================================================= */
+
+.fish-card {
+    position: relative;
+    z-index: 7;
+
+    justify-self: end;
+
+    width: 100%;
+    max-width: 390px;
+
+    min-height: 500px;
+
+    padding: 58px 50px;
+
+    border-radius: 35px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #064335,
+            #07392e 58%,
+            #063128
+        );
+
+    color: #fff;
+
+    box-shadow:
+        0 35px 80px rgba(4, 51, 41, .12);
+}
+
+.fish-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    right: -70px;
+    bottom: -70px;
+
+    border: 1px solid rgba(181, 226, 107, .17);
+
+    border-radius: 50%;
+}
+
+.fish-card-label {
+    display: block;
+
+    margin-bottom: 40px;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: #b8e76d;
+}
+
+.fish-price {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+}
+
+.fish-price > strong {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 82px;
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+.fish-price > div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.fish-price span {
+    font-size: 15px;
+    font-weight: 700;
+
+    color: #b8e76d;
+}
+
+.fish-price small {
+    font-size: 8px;
+
+    color: rgba(255, 255, 255, .65);
+}
+
+.fish-card-line {
+    height: 1px;
+
+    margin: 28px 0 34px;
+
+    background: rgba(184, 231, 109, .26);
+}
+
+.fish-card h3 {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.fish-card > p {
+    max-width: 260px;
+
+    margin-top: 17px;
+
+    font-size: 12px;
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, .65);
+}
+
+/* CALL BUTTON */
+
+.fish-call {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+    height: 64px;
+
+    margin-top: 34px;
+
+    padding: 0 18px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    border-radius: 35px;
+
+    background: #f3f0e7;
+
+    color: #0b3a30;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.fish-call:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 14px 30px rgba(0, 0, 0, .14);
+}
+
+.fish-call > span {
+    width: 37px;
+    height: 37px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #e4eadb;
+
+    color: #34715e;
+}
+
+.fish-call > div {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+}
+
+.fish-call small {
+    margin-bottom: 2px;
+
+    font-size: 5.5px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #8c968f;
+}
+
+.fish-call strong {
+    font-size: 12px;
+}
+
+.fish-call b {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* BIG BACKGROUND WORD */
+
+.fish-big-word {
+    position: absolute;
+
+    z-index: 0;
+
+    left: -20px;
+    bottom: -20px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(170px, 21vw, 380px);
+    font-weight: 600;
+
+    line-height: .65;
+
+    letter-spacing: -12px;
+
+    color: rgba(12, 55, 45, .025);
+
+    pointer-events: none;
+}
+
+/* =========================================================
+   POVESTEA NOASTRĂ
+========================================================= */
+
+.story-section {
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 145px 7% 150px;
+
+    overflow: hidden;
+
+    color: #fff;
+
+    background:
+        radial-gradient(
+            circle at 82% 28%,
+            rgba(135, 183, 106, .13),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #052b23,
+            #073a2f 55%,
+            #04251e
+        );
+}
+
+.story-section::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 70%;
+    height: 1px;
+
+    transform: translateX(-50%);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(184, 231, 109, .45),
+            transparent
+        );
+}
+
+.story-inner {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+    max-width: 1450px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+
+    align-items: center;
+
+    gap: 100px;
+}
+
+/* STORY LEFT */
+
+.story-kicker {
+    display: block;
+
+    margin-bottom: 28px;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    color: #b8e76d;
+}
+
+.story-left h2 {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(75px, 6vw, 110px);
+
+    font-weight: 600;
+
+    line-height: .87;
+
+    letter-spacing: -5px;
+
+    color: #f4f1e8;
+}
+
+.story-left h2 em {
+    color: #9fd070;
+
+    font-weight: 500;
+}
+
+.story-line {
+    width: 70px;
+    height: 1px;
+
+    margin: 42px 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #b8e76d,
+            transparent
+        );
+}
+
+.story-lead {
+    max-width: 450px;
+
+    margin-bottom: 23px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 23px;
+    line-height: 1.45;
+
+    color: rgba(255, 255, 255, .93);
+}
+
+.story-text {
+    max-width: 470px;
+
+    margin-top: 15px;
+
+    font-size: 13px;
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, .56);
+}
+
+/* STORY ADDRESS */
+
+.story-location {
+    width: fit-content;
+
+    margin-top: 43px;
+
+    padding: 11px 23px 11px 11px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    border: 1px solid rgba(184, 231, 109, .20);
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, .035);
+
+    backdrop-filter: blur(12px);
+}
+
+.story-location-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(184, 231, 109, .09);
+
+    color: #b8e76d;
+}
+
+.story-location > div:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.story-location small {
+    margin-bottom: 4px;
+
+    font-size: 6px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: rgba(255, 255, 255, .45);
+}
+
+.story-location strong {
+    font-size: 12px;
+}
+
+/* STORY IMAGE */
+
+.story-visual {
+    position: relative;
+
+    min-height: 630px;
+}
+
+.story-image {
+    position: absolute;
+
+    width: 88%;
+    height: 560px;
+
+    top: 20px;
+    right: 0;
+
+    overflow: hidden;
+
+    border-radius:
+        140px 20px 140px 20px;
+
+    box-shadow:
+        0 40px 90px rgba(0, 0, 0, .30);
+}
+
+.story-image::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(4, 36, 29, .02),
+            rgba(4, 36, 29, .42)
+        );
+}
+
+.story-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transform: scale(1.04);
+
+    transition:
+        transform 1.4s ease;
+}
+
+.story-image:hover img {
+    transform: scale(1.09);
+}
+
+/* STORY CIRCLE */
+
+.story-number {
+    position: absolute;
+    z-index: 5;
+
+    left: 0;
+    top: 85px;
+
+    width: 140px;
+    height: 140px;
+
+    padding-left: 29px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f2efe6;
+
+    color: #0b3b30;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, .22);
+}
+
+.story-number span {
+    font-family: "Playfair Display", serif;
+
+    font-size: 37px;
+
+    line-height: 1;
+}
+
+.story-number small {
+    margin-top: 8px;
+
+    font-size: 6px;
+    font-weight: 700;
+
+    line-height: 1.5;
+
+    letter-spacing: 2px;
+}
+
+/* STORY QUOTE */
+
+.story-quote {
+    position: absolute;
+    z-index: 6;
+
+    right: 25px;
+    bottom: 0;
+
+    width: 315px;
+
+    padding: 27px 32px;
+
+    border: 1px solid rgba(255, 255, 255, .10);
+    border-radius: 23px;
+
+    background: rgba(7, 55, 44, .86);
+
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, .23);
+}
+
+.story-quote > span {
+    display: block;
+
+    height: 27px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 55px;
+
+    line-height: 1;
+
+    color: #b8e76d;
+}
+
+.story-quote p {
+    margin-top: 9px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+/* STORY BIG WORD */
+
+.story-bg-word {
+    position: absolute;
+
+    left: -30px;
+    bottom: -60px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(180px, 22vw, 400px);
+
+    font-weight: 700;
+
+    line-height: .7;
+
+    letter-spacing: -15px;
+
+    color: rgba(255, 255, 255, .018);
+
+    pointer-events: none;
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section {
+    position: relative;
+
+    min-height: 80vh;
+
+    padding: 150px 7%;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 78% 50%,
+            rgba(113, 165, 102, .12),
+            transparent 28%
+        ),
+        #f2efe6;
+
+    color: #0a332a;
+}
+
+.contact-inner {
+    width: 100%;
+    max-width: 1450px;
+
+    margin: 0 auto;
+}
+
+.contact-kicker {
+    display: block;
+
+    margin-bottom: 25px;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    color: #3c7763;
+}
+
+.contact-inner h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(75px, 7vw, 125px);
+
+    font-weight: 600;
+
+    line-height: .85;
+
+    letter-spacing: -6px;
+}
+
+.contact-inner h2 em {
+    color: #70a768;
+
+    font-weight: 500;
+}
+
+.contact-inner > p {
+    max-width: 480px;
+
+    margin-top: 35px;
+
+    font-size: 14px;
+    line-height: 1.8;
+
+    color: #6e8078;
+}
+
+.contact-details {
+    max-width: 750px;
+
+    margin-top: 55px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    border-top: 1px solid rgba(8, 51, 42, .17);
+    border-bottom: 1px solid rgba(8, 51, 42, .17);
+}
+
+.contact-details > div {
+    padding: 28px 30px 28px 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.contact-details > div + div {
+    padding-left: 35px;
+
+    border-left: 1px solid rgba(8, 51, 42, .17);
+}
+
+.contact-details small {
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #76a36b;
+}
+
+.contact-details strong,
+.contact-details a {
+    font-family: "Playfair Display", serif;
+
+    font-size: 23px;
+
+    color: #0a332a;
+}
+
+.contact-details span {
+    font-size: 12px;
+
+    color: #74867d;
+}
+
+.contact-call {
+    width: fit-content;
+
+    min-width: 270px;
+    height: 60px;
+
+    margin-top: 38px;
+
+    padding: 0 22px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+
+    border-radius: 35px;
+
+    background: #073b30;
+
+    color: #fff;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
+}
+
+.contact-call:hover {
+    transform: translateY(-3px);
+
+    background: #0b4a3c;
+}
+
+.contact-call span {
+    margin-left: auto;
+
+    color: #b8e76d;
+
+    font-size: 19px;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    min-height: 125px;
+
+    padding: 35px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    background: #042820;
+
+    color: #fff;
+
+    border-top:
+        1px solid rgba(184, 231, 109, .14);
+}
+
+.footer > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer strong {
+    font-family: "Playfair Display", serif;
+
+    font-size: 20px;
+}
+
+.footer > div span {
+    margin-top: 5px;
+
+    font-size: 6px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: rgba(255, 255, 255, .45);
+}
+
+.footer p {
+    font-size: 11px;
+
+    color: rgba(255, 255, 255, .55);
+}
+
+.footer > a {
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #b8e76d;
+}
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+.mobile-toggle {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    border: 1px solid rgba(255, 255, 255, .18);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .05);
+
+    cursor: pointer;
+}
+
+.mobile-toggle span {
+    display: block;
+
+    width: 17px;
+    height: 1px;
+
+    margin: 5px auto;
+
+    background: #fff;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1150px) {
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .nav-inner {
+        grid-template-columns: 1fr auto auto;
+
+        gap: 12px;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+
+    .hero-container {
+        width: 88%;
+
+        grid-template-columns: 1fr 280px;
+
+        gap: 40px;
+    }
+
+    .hero-copy h1 {
+        font-size: 82px;
+    }
+
+    .fish-section-inner {
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+    }
+
+    .fish-card {
+        justify-self: start;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .floating-trout {
+        left: 65%;
+        top: 39%;
+    }
+
+    .story-inner {
+        grid-template-columns: 1fr;
+
+        gap: 80px;
+    }
+
+    .story-visual {
+        min-height: 600px;
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .navbar {
+        top: 10px;
+
+        width: 94%;
+    }
+
+    .nav-inner {
+        height: 64px;
+
+        padding: 0 10px;
+    }
+
+    .logo-icon {
+        width: 43px;
+        height: 43px;
+    }
+
+    .logo-text strong {
+        font-size: 16px;
+    }
+
+    .logo-text span {
+        font-size: 5px;
+
+        letter-spacing: 2.5px;
+    }
+
+    .nav-order {
+        display: none;
+    }
+
+    .nav-inner {
+        grid-template-columns: 1fr auto;
+    }
+
+    /* MOBILE MENU OPEN */
+
+    .mobile-menu {
+        position: fixed;
+        z-index: 100;
+
+        top: 82px;
+        left: 3%;
+
+        width: 94%;
+
+        padding: 40px 30px;
+
+        border-radius: 25px;
+
+        background: rgba(3, 45, 36, .97);
+
+        backdrop-filter: blur(20px);
+
+        color: #fff;
+    }
+
+    .mobile-menu.open {
+        display: block;
+    }
+
+    .mobile-menu-bg {
+        position: absolute;
+
+        right: -10px;
+        bottom: 10px;
+
+        font-family: "Playfair Display", serif;
+
+        font-size: 55px;
+
+        color: rgba(255, 255, 255, .025);
+
+        pointer-events: none;
+    }
+
+    .mobile-links {
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .mobile-links a {
+        padding: 13px 0;
+
+        font-family: "Playfair Display", serif;
+
+        font-size: 27px;
+
+        border-bottom:
+            1px solid rgba(255, 255, 255, .08);
+    }
+
+    .mobile-contact {
+        margin-top: 30px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .mobile-contact > span {
+        font-size: 7px;
+
+        letter-spacing: 3px;
+
+        color: #b8e76d;
+    }
+
+    .mobile-contact > a {
+        font-size: 20px;
+
+        font-weight: 600;
+    }
+
+    .mobile-contact p {
+        font-size: 11px;
+
+        line-height: 1.6;
+
+        color: rgba(255, 255, 255, .55);
+    }
+
+    /* HERO */
+
+    .hero {
+        min-height: 850px;
+
+        background-position: 58% center;
+    }
+
+    .hero-container {
+        width: 88%;
+
+        min-height: 850px;
+
+        padding-top: 130px;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+        justify-content: center;
+
+        gap: 55px;
+    }
+
+    .hero-copy {
+        max-width: 100%;
+    }
+
+    .eyebrow {
+        font-size: 7px;
+
+        letter-spacing: 3px;
+
+        gap: 9px;
+    }
+
+    .hero-copy h1 {
+        max-width: 100%;
+
+        font-size: clamp(55px, 16vw, 75px);
+
+        letter-spacing: -3px;
+
+        line-height: .85;
+    }
+
+    .description {
+        max-width: 90%;
+
+        font-size: 13px;
+    }
+
+    .benefits {
+        display: none;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    .order-button {
+        width: min(100%, 310px);
+    }
+
+    /* FISH */
+
+    /* =========================================================
+   PĂSTRĂV — MOBILE FINAL
+========================================================= */
+
+.fish-section {
+    min-height: auto;
+    padding: 75px 24px 80px;
+}
+
+.fish-section-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+}
+
+/* TITLU */
+
+.fish-kicker {
+    margin-bottom: 18px;
+    font-size: 7px;
+    letter-spacing: 4px;
+}
+
+.fish-intro h2 {
+    max-width: 340px;
+    font-size: 52px;
+    line-height: .88;
+    letter-spacing: -2.5px;
+}
+
+.fish-intro h2 em {
+    display: block;
+}
+
+.fish-intro > p {
+    max-width: 330px;
+    margin-top: 28px;
+    font-size: 12px;
+    line-height: 1.75;
+}
+
+/* CELE 3 AVANTAJE */
+
+.fish-features {
+    width: 100%;
+    margin-top: 35px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    border-top: 1px solid rgba(8, 51, 42, .16);
+    border-bottom: 1px solid rgba(8, 51, 42, .16);
+}
+
+.fish-features > div {
+    min-height: auto;
+    padding: 18px 0;
+}
+
+.fish-features > div + div {
+    padding-left: 0;
+    border-left: 0;
+    border-top: 1px solid rgba(8, 51, 42, .11);
+}
+
+.fish-features span {
+    margin-bottom: 8px;
+    font-size: 9px;
+}
+
+.fish-features strong {
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.fish-features small,
+.fish-features .location-address {
+    font-size: 10px;
+}
+
+/* PĂSTRĂV */
+
+.floating-trout {
+    position: relative;
+
+    width: 94%;
+    max-width: 400px;
+
+    left: 50%;
+    top: auto;
+
+    margin: 12px 0 18px;
+
+    transform: translateX(-50%);
+}
+
+.trout-image {
+    width: 100%;
+}
+
+/* CARD PREȚ - MOBILE */
+
+.fish-card {
+    width: 100%;
+    max-width: none;
+    min-height: auto;
+
+    margin: 0;
+
+    padding: 32px 26px 28px;
+
+    border-radius: 26px;
+}
+
+.fish-card-label {
+    margin-bottom: 20px;
+}
+
+.fish-price {
+    margin-bottom: 18px;
+}
+
+.fish-price > strong {
+    font-size: 64px;
+    line-height: .9;
+}
+
+.fish-price > div {
+    font-size: 10px;
+}
+
+.fish-card-line {
+    margin: 20px 0 22px;
+}
+
+.fish-card h3 {
+    margin-bottom: 10px;
+    font-size: 29px;
+    line-height: 1;
+}
+
+.fish-card > p {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.65;
+}
+
+.fish-call {
+    width: 100%;
+    min-height: 56px;
+    margin-top: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fish-big-word {
+    display: none;
+}
+
+    /* STORY */
+
+    .story-section {
+        min-height: auto;
+
+        padding:
+            100px 6% 120px;
+    }
+
+    .story-inner {
+        display: block;
+    }
+
+    .story-left h2 {
+        font-size: 62px;
+
+        letter-spacing: -3px;
+    }
+
+    .story-lead {
+        font-size: 20px;
+    }
+
+    .story-visual {
+        min-height: 530px;
+
+        margin-top: 80px;
+    }
+
+    .story-image {
+        position: relative;
+
+        width: 100%;
+        height: 430px;
+
+        top: auto;
+        right: auto;
+
+        border-radius:
+            75px 15px 75px 15px;
+    }
+
+    .story-number {
+        width: 105px;
+        height: 105px;
+
+        left: -5px;
+        top: -30px;
+
+        padding-left: 21px;
+    }
+
+    .story-number span {
+        font-size: 28px;
+    }
+
+    .story-quote {
+        width: 88%;
+
+        right: 0;
+        bottom: 0;
+
+        padding: 24px;
+    }
+
+    .story-bg-word {
+        display: none;
+    }
+
+    /* CONTACT */
+
+    .contact-section {
+        min-height: auto;
+
+        padding:
+            110px 6%;
+    }
+
+    .contact-inner h2 {
+        font-size: 65px;
+
+        letter-spacing: -4px;
+    }
+
+    .contact-details {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-details > div + div {
+        padding-left: 0;
+
+        border-left: 0;
+
+        border-top:
+            1px solid rgba(8, 51, 42, .15);
+    }
+
+    /* FOOTER */
+
+    .footer {
+        padding: 40px 6%;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .trout-image,
+    .scroll-indicator .mouse::after {
+        animation: none;
+    }
+}
+
+/* =========================================================
+   POVESTEA NOASTRĂ — DESIGN NOU
+========================================================= */
+
+.story-section {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 110px 6%;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background-image:
+        url("images/poveste-fundal.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #ffffff;
+}
+
+/* =========================================================
+   OVERLAY PESTE FOTOGRAFIE
+========================================================= */
+
+.story-overlay {
+    position: absolute;
+    z-index: 1;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 35, 28, .52) 0%,
+            rgba(3, 35, 28, .18) 48%,
+            rgba(3, 35, 28, .04) 75%,
+            rgba(3, 35, 28, .10) 100%
+        );
+}
+
+/* =========================================================
+   CONȚINUT
+========================================================= */
+
+.story-content {
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+    max-width: 1500px;
+
+    min-height: 720px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+}
+
+/* =========================================================
+   PANOU VERDE
+========================================================= */
+
+.story-panel {
+    position: relative;
+
+    width: min(650px, 52vw);
+
+    padding:
+        62px 68px 55px;
+
+    border-radius: 34px;
+
+    border:
+        1px solid rgba(255,255,255,.11);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(4, 52, 42, .94),
+            rgba(4, 42, 34, .89)
+        );
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 40px 100px rgba(0,0,0,.28);
+}
+
+/* lumină subtilă */
+
+.story-panel::before {
+    content: "";
+
+    position: absolute;
+
+    width: 330px;
+    height: 330px;
+
+    top: -150px;
+    right: -120px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(170,220,116,.11),
+            transparent 68%
+        );
+
+    pointer-events: none;
+}
+
+/* =========================================================
+   MIC TITLU
+========================================================= */
+
+.story-kicker {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    margin-bottom: 25px;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    color: #b8e77d;
+}
+
+/* =========================================================
+   TITLU
+========================================================= */
+
+.story-panel h2 {
+    position: relative;
+    z-index: 2;
+
+    max-width: 550px;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(54px, 4.5vw, 78px);
+
+    font-weight: 600;
+
+    line-height: .92;
+
+    letter-spacing: -3.5px;
+
+    color: #f5f1e8;
+}
+
+.story-panel h2 em {
+    display: block;
+
+    margin-top: 7px;
+
+    font-weight: 500;
+
+    color: #a7d779;
+}
+
+/* =========================================================
+   LINIE
+========================================================= */
+
+.story-line {
+    position: relative;
+    z-index: 2;
+
+    width: 75px;
+    height: 1px;
+
+    margin: 34px 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #b8e77d,
+            rgba(184,231,125,0)
+        );
+}
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.story-lead {
+    position: relative;
+    z-index: 2;
+
+    max-width: 470px;
+
+    margin-bottom: 18px;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 19px;
+    line-height: 1.45;
+
+    color: rgba(255,255,255,.92);
+}
+
+.story-text {
+    position: relative;
+    z-index: 2;
+
+    max-width: 490px;
+
+    margin-top: 12px;
+
+    font-size: 12.5px;
+    line-height: 1.75;
+
+    color: rgba(255,255,255,.60);
+}
+
+/* =========================================================
+   CELE 3 VALORI
+========================================================= */
+
+.story-values {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 34px;
+    padding-top: 27px;
+
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    border-top:
+        1px solid rgba(255,255,255,.10);
+}
+
+.story-value {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+}
+
+.story-value-icon {
+    width: 35px;
+    height: 35px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(184,231,125,.25);
+
+    background:
+        rgba(184,231,125,.06);
+
+    color: #b8e77d;
+
+    font-size: 13px;
+}
+
+.story-value > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.story-value strong {
+    margin-bottom: 3px;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    color: #ffffff;
+}
+
+.story-value small {
+    font-size: 7px;
+    line-height: 1.4;
+
+    color:
+        rgba(255,255,255,.42);
+}
+
+/* =========================================================
+   ADRESA
+========================================================= */
+
+.story-location {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+
+    margin-top: 34px;
+    padding: 13px 17px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    border:
+        1px solid rgba(184,231,125,.18);
+
+    border-radius: 50px;
+
+    background:
+        rgba(255,255,255,.035);
+}
+
+.story-location-icon {
+    width: 39px;
+    height: 39px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(184,231,125,.09);
+
+    color: #b8e77d;
+}
+
+.story-location > div {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+}
+
+.story-location small {
+    margin-bottom: 3px;
+
+    font-size: 6px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color:
+        rgba(255,255,255,.43);
+}
+
+.story-location strong {
+    font-size: 12px;
+    font-weight: 600;
+
+    color: #ffffff;
+}
+
+.story-location-arrow {
+    padding-right: 5px;
+
+    font-size: 18px;
+
+    color: #b8e77d;
+}
+
+/* =========================================================
+   CARD FLOTANT DREAPTA
+========================================================= */
+
+.story-floating-card {
+    position: absolute;
+
+    z-index: 7;
+
+    right: 3%;
+    bottom: 25px;
+
+    width: 330px;
+
+    padding: 28px 30px;
+
+    border:
+        1px solid rgba(255,255,255,.20);
+
+    border-radius: 23px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(3,47,38,.83),
+            rgba(3,35,29,.72)
+        );
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.25);
+}
+
+.story-card-label {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 6px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #b8e77d;
+}
+
+.story-floating-card p {
+    max-width: 260px;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 23px;
+    line-height: 1.25;
+
+    color: #ffffff;
+}
+
+.story-card-bottom {
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.story-card-bottom span {
+    width: 35px;
+    height: 1px;
+
+    background: #b8e77d;
+}
+
+.story-card-bottom small {
+    font-size: 6px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color:
+        rgba(255,255,255,.45);
+}
+
+/* =========================================================
+   EFECT LA SCROLL / HOVER
+========================================================= */
+
+.story-panel,
+.story-floating-card {
+    transition:
+        transform .5s ease,
+        box-shadow .5s ease;
+}
+
+.story-panel:hover {
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 45px 110px rgba(0,0,0,.33);
+}
+
+.story-floating-card:hover {
+    transform:
+        translateY(-5px);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .story-section {
+        padding:
+            100px 5%;
+    }
+
+    .story-content {
+        min-height: 700px;
+    }
+
+    .story-panel {
+        width: 650px;
+        max-width: 70%;
+
+        padding:
+            55px 50px;
+    }
+
+    .story-floating-card {
+        right: 0;
+
+        width: 290px;
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .story-section {
+        min-height: auto;
+
+        padding:
+            100px 5% 80px;
+
+        background-position:
+            58% center;
+    }
+
+    .story-overlay {
+        background:
+            linear-gradient(
+                to bottom,
+                rgba(3,35,28,.25),
+                rgba(3,35,28,.58)
+            );
+    }
+
+    .story-content {
+        min-height: auto;
+
+        display: block;
+    }
+
+    .story-panel {
+        width: 100%;
+        max-width: none;
+
+        padding:
+            42px 27px;
+
+        border-radius: 26px;
+    }
+
+    .story-panel h2 {
+        font-size: 52px;
+
+        letter-spacing: -3px;
+    }
+
+    .story-values {
+        grid-template-columns: 1fr;
+
+        gap: 17px;
+    }
+
+    .story-value {
+        padding-bottom: 14px;
+
+        border-bottom:
+            1px solid rgba(255,255,255,.07);
+    }
+
+    .story-floating-card {
+        position: relative;
+
+        width: 88%;
+
+        right: auto;
+        bottom: auto;
+
+        margin:
+            30px 0 0 auto;
+    }
+
+}
+
+/* =========================================================
+   TELEFOANE MICI
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .story-panel h2 {
+        font-size: 45px;
+    }
+
+    .story-lead {
+        font-size: 17px;
+    }
+
+    .story-text {
+        font-size: 12px;
+    }
+
+    .story-location {
+        border-radius: 20px;
+    }
+
+    .story-floating-card {
+        width: 95%;
+    }
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section {
+    position: relative;
+    min-height: 100vh;
+    padding: 120px 7% 0;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 78% 42%,
+            rgba(167, 215, 121, .12),
+            transparent 26%
+        ),
+        #f3f0e7;
+
+    color: #063d32;
+}
+
+/* CUVÂNT DECORATIV */
+
+.contact-bg-word {
+    position: absolute;
+    right: -45px;
+    top: 100px;
+
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(130px, 16vw, 300px);
+    font-weight: 600;
+
+    letter-spacing: -12px;
+
+    color: rgba(6, 61, 50, .025);
+
+    user-select: none;
+    pointer-events: none;
+}
+
+/* CONȚINUT PRINCIPAL */
+
+.contact-wrapper {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr .85fr;
+
+    gap: 100px;
+    align-items: center;
+}
+
+/* =========================================================
+   STÂNGA
+========================================================= */
+
+.contact-left {
+    max-width: 690px;
+}
+
+.contact-kicker {
+    display: block;
+
+    margin-bottom: 28px;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    color: #397e6b;
+}
+
+.contact-left h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(70px, 7vw, 125px);
+    line-height: .83;
+
+    font-weight: 500;
+
+    letter-spacing: -6px;
+
+    color: #063d32;
+}
+
+.contact-left h2 em {
+    display: block;
+
+    margin-top: 12px;
+
+    font-weight: 500;
+
+    color: #76ae6d;
+}
+
+.contact-intro {
+    max-width: 480px;
+
+    margin-top: 42px;
+
+    font-size: 14px;
+    line-height: 1.8;
+
+    color: #6f7770;
+}
+
+/* DATE CONTACT */
+
+.contact-details {
+    width: 100%;
+
+    margin-top: 55px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    border-top: 1px solid rgba(6, 61, 50, .17);
+    border-bottom: 1px solid rgba(6, 61, 50, .17);
+}
+
+.contact-detail {
+    min-height: 130px;
+
+    padding: 31px 35px 28px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-detail + .contact-detail {
+    padding-left: 45px;
+
+    border-left:
+        1px solid rgba(6, 61, 50, .17);
+}
+
+.contact-detail > span {
+    margin-bottom: 13px;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: #6b9e6c;
+}
+
+.contact-detail strong,
+.contact-detail a {
+    margin-bottom: 7px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 21px;
+    font-weight: 600;
+
+    color: #063d32;
+
+    text-decoration: none;
+}
+
+.contact-detail small {
+    font-size: 10px;
+
+    color: #8a918b;
+}
+
+/* BUTON TELEFON */
+
+.contact-call-btn {
+    width: 270px;
+
+    margin-top: 40px;
+    padding: 0 22px;
+
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 50px;
+
+    background: #064c3e;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 18px 45px rgba(6, 61, 50, .14);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        background .3s ease;
+}
+
+.contact-call-btn span {
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: .7px;
+
+    color: #ffffff;
+}
+
+.contact-call-btn b {
+    font-size: 20px;
+    font-weight: 400;
+
+    color: #b9e879;
+
+    transition: transform .3s ease;
+}
+
+.contact-call-btn:hover {
+    transform: translateY(-4px);
+
+    background: #043e33;
+
+    box-shadow:
+        0 24px 55px rgba(6, 61, 50, .22);
+}
+
+.contact-call-btn:hover b {
+    transform: translateX(5px);
+}
+
+/* =========================================================
+   CARD LOCAȚIE
+========================================================= */
+
+.contact-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.location-card {
+    position: relative;
+
+    width: min(100%, 540px);
+    min-height: 610px;
+
+    padding: 38px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border-radius: 36px;
+
+    background:
+        radial-gradient(
+            circle at 75% 22%,
+            rgba(181, 231, 125, .16),
+            transparent 27%
+        ),
+        linear-gradient(
+            145deg,
+            #064c3e,
+            #03362d
+        );
+
+    box-shadow:
+        0 40px 100px rgba(4, 50, 41, .20);
+}
+
+/* LINII DECORATIVE TIP HARTĂ */
+
+.location-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    opacity: .055;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.6) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.6) 1px,
+            transparent 1px
+        );
+
+    background-size: 60px 60px;
+
+    transform: rotate(-8deg) scale(1.2);
+}
+
+.location-card::after {
+    content: "52B";
+
+    position: absolute;
+
+    right: -5px;
+    bottom: 45px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 170px;
+    font-weight: 600;
+
+    color: rgba(255,255,255,.025);
+}
+
+/* SUS CARD */
+
+.location-top {
+    position: relative;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.location-top > span {
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: #b8e77d;
+}
+
+.location-dot {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: rgba(255,255,255,.55);
+}
+
+.location-dot i {
+    position: relative;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #b8e77d;
+
+    box-shadow:
+        0 0 0 5px rgba(184,231,125,.09);
+}
+
+/* MIJLOC */
+
+.location-center {
+    position: relative;
+    z-index: 5;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-left: 25px;
+}
+
+.map-pin {
+    width: 64px;
+    height: 64px;
+
+    margin-bottom: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid rgba(184,231,125,.30);
+
+    border-radius:
+        50% 50% 50% 12px;
+
+    transform: rotate(-45deg);
+
+    background:
+        rgba(184,231,125,.08);
+}
+
+.map-pin span {
+    color: #b8e77d;
+
+    font-size: 18px;
+
+    transform: rotate(45deg);
+}
+
+.location-center small {
+    margin-bottom: 13px;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: #b8e77d;
+}
+
+.location-center h3 {
+    margin: 0 0 20px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(45px, 4vw, 68px);
+
+    line-height: .95;
+
+    letter-spacing: -2px;
+
+    color: #f5f1e8;
+}
+
+.location-center p {
+    font-size: 13px;
+    line-height: 1.7;
+
+    color: rgba(255,255,255,.55);
+}
+
+/* BUTON MAPS */
+
+.location-button {
+    position: relative;
+    z-index: 5;
+
+    height: 62px;
+
+    padding: 0 23px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border:
+        1px solid rgba(184,231,125,.23);
+
+    border-radius: 50px;
+
+    background:
+        rgba(255,255,255,.055);
+
+    text-decoration: none;
+
+    transition:
+        background .3s ease,
+        transform .3s ease;
+}
+
+.location-button span {
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #ffffff;
+}
+
+.location-button b {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #b8e77d;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    color: #063d32;
+}
+
+.location-button:hover {
+    transform: translateY(-3px);
+
+    background:
+        rgba(255,255,255,.09);
+}
+
+/* DECORAȚII */
+
+.map-line {
+    position: absolute;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(184,231,125,.15),
+            transparent
+        );
+
+    transform: rotate(-28deg);
+}
+
+.map-line-one {
+    width: 480px;
+
+    top: 220px;
+    left: -80px;
+}
+
+.map-line-two {
+    width: 430px;
+
+    top: 330px;
+    right: -100px;
+
+    transform: rotate(31deg);
+}
+
+.map-line-three {
+    width: 350px;
+
+    bottom: 170px;
+    left: -50px;
+
+    transform: rotate(-15deg);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+    max-width: 1540px;
+
+    margin: 85px auto 0;
+
+    border-top: 1px solid rgba(6, 61, 50, .15);
+
+    color: #063d32;
+}
+
+/* PARTEA DE SUS */
+
+.footer-main {
+    min-height: 135px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    align-items: center;
+    gap: 40px;
+}
+
+/* BRAND */
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-brand strong {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    letter-spacing: -.5px;
+
+    color: #063d32;
+}
+
+.footer-brand span {
+    margin-top: 5px;
+
+    font-size: 6px;
+    font-weight: 700;
+
+    letter-spacing: 3.5px;
+
+    color: #76ae6d;
+}
+
+/* LOCAȚIE */
+
+.footer-location span,
+.footer-contact span {
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 6px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #76ae6d;
+}
+
+.footer-location p {
+    margin: 0;
+
+    font-size: 10px;
+
+    color: #777f78;
+}
+
+/* CONTACT */
+
+.footer-contact a {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    color: #063d32;
+
+    text-decoration: none;
+
+    transition: color .25s ease;
+}
+
+.footer-contact a:hover {
+    color: #76ae6d;
+}
+
+/* =========================================================
+   FOOTER LEGAL
+========================================================= */
+
+.footer-bottom {
+    min-height: 75px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    border-top: 1px solid rgba(6, 61, 50, .09);
+}
+
+/* COPYRIGHT */
+
+.footer-copyright {
+    font-size: 8px;
+
+    letter-spacing: .3px;
+
+    color: #969c96;
+}
+
+/* LINKURI */
+
+.footer-legal {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+.footer-legal a {
+    position: relative;
+
+    font-size: 8px;
+    font-weight: 600;
+
+    letter-spacing: .4px;
+
+    color: #6e766f;
+
+    text-decoration: none;
+
+    transition: color .25s ease;
+}
+
+.footer-legal a:hover {
+    color: #063d32;
+}
+
+/* ANPC + SAL */
+
+.footer-legal a:nth-last-child(-n+2) {
+    padding: 9px 15px;
+
+    border: 1px solid rgba(6, 61, 50, .15);
+
+    border-radius: 30px;
+
+    color: #063d32;
+}
+
+.footer-legal a:nth-last-child(-n+2):hover {
+    border-color: #76ae6d;
+
+    background: rgba(118, 174, 109, .08);
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .site-footer {
+        margin-top: 65px;
+    }
+
+    .footer-main {
+        padding: 40px 0;
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .footer-location,
+    .footer-contact {
+        text-align: left;
+    }
+
+    .footer-bottom {
+        padding: 28px 0;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 22px;
+    }
+
+    .footer-legal {
+        flex-wrap: wrap;
+
+        gap: 14px 20px;
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .footer-legal {
+        align-items: flex-start;
+    }
+
+    .footer-legal a {
+        font-size: 8px;
+    }
+
+}
+
+/* =========================================================
+   TABLETĂ
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .contact-wrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+
+    .location-card {
+        min-height: 550px;
+    }
+
+}
+
+/* =========================================================
+   MOBIL
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .contact-section {
+        min-height: auto;
+
+        padding:
+            90px 6% 0;
+    }
+
+    .contact-bg-word {
+        display: none;
+    }
+
+    .contact-wrapper {
+        display: block;
+    }
+
+    .contact-left {
+        max-width: none;
+    }
+
+    .contact-left h2 {
+        font-size: 70px;
+        letter-spacing: -4px;
+    }
+
+    .contact-right {
+        margin-top: 70px;
+    }
+
+    .location-card {
+        width: 100%;
+        min-height: 560px;
+    }
+
+    .site-footer {
+        margin-top: 70px;
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        padding: 35px 0;
+
+        text-align: left;
+    }
+
+    .footer-center {
+        text-align: left;
+    }
+
+    .site-footer > a {
+        justify-self: start;
+    }
+
+}
+
+/* =========================================================
+   TELEFON MIC
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .contact-left h2 {
+        font-size: 58px;
+    }
+
+    .contact-details {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-detail {
+        min-height: 110px;
+    }
+
+    .contact-detail + .contact-detail {
+        padding-left: 0;
+
+        border-left: 0;
+
+        border-top:
+            1px solid rgba(6,61,50,.17);
+    }
+
+    .contact-call-btn {
+        width: 100%;
+    }
+
+    .location-card {
+        min-height: 520px;
+
+        padding: 28px;
+
+        border-radius: 27px;
+    }
+
+    .location-center {
+        padding-left: 5px;
+    }
+
+    .location-center h3 {
+        font-size: 48px;
+    }
+
+}
+
+/* =========================================================
+   FIX CONTACT - DESKTOP WIDE
+========================================================= */
+
+.contact-section {
+    min-height: 100vh;
+    padding: 110px 6% 0;
+}
+
+.contact-wrapper {
+    width: 100%;
+    max-width: 1540px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 560px;
+    gap: clamp(70px, 8vw, 150px);
+
+    align-items: center;
+}
+
+/* STÂNGA */
+
+.contact-left {
+    width: 100%;
+    max-width: 720px;
+}
+
+.contact-left h2 {
+    font-size: clamp(80px, 7.2vw, 128px);
+    line-height: .82;
+    letter-spacing: -6px;
+
+    white-space: nowrap;
+}
+
+.contact-left h2 em {
+    display: block;
+    white-space: nowrap;
+}
+
+/* TEXT */
+
+.contact-intro {
+    max-width: 520px;
+
+    margin-top: 45px;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* ADRESĂ + TELEFON */
+
+.contact-details {
+    width: 100%;
+    max-width: 700px;
+
+    margin-top: 55px;
+
+    grid-template-columns: 1.15fr .85fr;
+}
+
+.contact-detail {
+    min-height: 125px;
+    padding: 30px 35px 30px 0;
+}
+
+.contact-detail + .contact-detail {
+    padding-left: 45px;
+}
+
+.contact-detail strong,
+.contact-detail a {
+    font-size: 21px;
+    white-space: nowrap;
+}
+
+/* CARD DREAPTA */
+
+.contact-right {
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.location-card {
+    width: 100%;
+    max-width: 560px;
+
+    min-height: 650px;
+
+    padding: 42px;
+
+    border-radius: 38px;
+}
+
+.location-center {
+    padding-left: 28px;
+}
+
+.location-center h3 {
+    font-size: 65px;
+}
+
+/* CUVÂNTUL MARE DIN FUNDAL */
+
+.contact-bg-word {
+    top: 70px;
+    right: -20px;
+
+    font-size: clamp(160px, 17vw, 310px);
+
+    opacity: .7;
+}
+
+/* FOOTER */
+
+.site-footer {
+    width: 100%;
+    max-width: 1540px;
+
+    margin: 100px auto 0;
+
+    min-height: 110px;
+
+    clear: both;
+}
+
+/* =========================================================
+   MONITOARE FOARTE MARI
+========================================================= */
+
+@media (min-width: 1600px) {
+
+    .contact-wrapper {
+        grid-template-columns:
+            minmax(650px, 1fr)
+            580px;
+    }
+
+    .contact-left {
+        max-width: 760px;
+    }
+
+    .location-card {
+        max-width: 580px;
+        min-height: 660px;
+    }
+
+}
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .contact-wrapper {
+        grid-template-columns:
+            minmax(0, 1fr)
+            470px;
+
+        gap: 55px;
+    }
+
+    .contact-left h2 {
+        font-size: 82px;
+    }
+
+    .location-card {
+        min-height: 580px;
+    }
+
+}
+
+/* =========================================================
+   MOBIL / TABLETĂ
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .contact-wrapper {
+        display: block;
+    }
+
+    .contact-left {
+        max-width: none;
+    }
+
+    .contact-left h2 {
+        white-space: normal;
+
+        font-size: clamp(58px, 14vw, 78px);
+    }
+
+    .contact-left h2 em {
+        white-space: normal;
+    }
+
+    .contact-detail strong,
+    .contact-detail a {
+        white-space: normal;
+    }
+
+    .contact-right {
+        margin-top: 70px;
+    }
+
+    .location-card {
+        max-width: none;
+    }
+
+}
+
+/* FIX FOOTER CONTACT */
+
+.contact-section {
+    display: block;
+}
+
+.contact-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.site-footer {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+
+    width: 100%;
+    max-width: 1540px;
+
+    margin: 90px auto 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    clear: both;
+}
+
+.footer-brand {
+    justify-self: start;
+}
+
+.footer-center {
+    justify-self: center;
+}
+
+.site-footer > a {
+    justify-self: end;
+}
+
+.access-note {
+    margin-top: 18px;
+    padding: 12px 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    max-width: 360px;
+
+    border-left: 2px solid #b8e77d;
+
+    background: rgba(184, 231, 125, .06);
+    border-radius: 0 12px 12px 0;
+}
+
+.access-note span {
+    color: #b8e77d;
+    font-size: 18px;
+}
+
+.access-note p {
+    margin: 0;
+
+    font-size: 10px;
+    line-height: 1.5;
+
+    color: rgba(255, 255, 255, .75);
+}
+
+/* =========================================================
+   CUM AJUNGI LA NOI
+========================================================= */
+
+.access-section {
+    position: relative;
+    z-index: 4;
+
+    width: 100%;
+    max-width: 1540px;
+
+    margin: 120px auto 0;
+}
+
+/* HEADER */
+
+.access-header {
+    margin-bottom: 40px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+.access-kicker {
+    display: block;
+
+    margin-bottom: 15px;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: #6b9e6c;
+}
+
+.access-header h3 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(48px, 5vw, 78px);
+    font-weight: 500;
+
+    line-height: .9;
+    letter-spacing: -3px;
+
+    color: #063d32;
+}
+
+.access-header h3 em {
+    color: #76ae6d;
+    font-weight: 500;
+}
+
+.access-header > p {
+    max-width: 470px;
+
+    margin: 0 0 5px;
+
+    font-size: 12px;
+    line-height: 1.8;
+
+    color: #7d857e;
+}
+
+/* IMAGINE */
+
+.access-image-wrapper {
+    position: relative;
+
+    width: 100%;
+    height: clamp(420px, 48vw, 680px);
+
+    overflow: hidden;
+
+    border-radius: 36px;
+
+    box-shadow:
+        0 35px 90px rgba(5, 54, 44, .14);
+}
+
+.access-image-wrapper > img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform .8s ease;
+}
+
+.access-image-wrapper:hover > img {
+    transform: scale(1.015);
+}
+
+/* BADGE 52B */
+
+.access-image-badge {
+    position: absolute;
+
+    right: 28px;
+    bottom: 28px;
+
+    padding: 12px 20px 12px 13px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    border: 1px solid rgba(255,255,255,.17);
+
+    border-radius: 50px;
+
+    background: rgba(3, 55, 45, .88);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.18);
+}
+
+.access-image-badge > span {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #b8e77d;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    color: #063d32;
+}
+
+.access-image-badge > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.access-image-badge small {
+    margin-bottom: 2px;
+
+    font-size: 6px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: rgba(255,255,255,.45);
+}
+
+.access-image-badge strong {
+    font-size: 11px;
+    font-weight: 600;
+
+    color: #ffffff;
+}
+
+/* FOOTER MAI APROAPE */
+
+.access-section + .site-footer {
+    margin-top: 80px;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .access-section {
+        margin-top: 90px;
+    }
+
+    .access-header {
+        display: block;
+    }
+
+    .access-header > p {
+        margin-top: 25px;
+    }
+
+    .access-image-wrapper {
+        height: 430px;
+
+        border-radius: 25px;
+    }
+
+    .access-image-wrapper > img {
+        object-position: center;
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .access-header h3 {
+        font-size: 50px;
+    }
+
+    .access-image-wrapper {
+        height: 340px;
+    }
+
+    .access-image-badge {
+        right: 15px;
+        bottom: 15px;
+    }
+
+}
+
+/* =========================================================
+   FOOTER - FIX FINAL
+========================================================= */
+
+.site-footer {
+    width: 100%;
+    max-width: 1540px;
+    margin: 90px auto 0;
+    padding: 0;
+}
+
+.footer-main {
+    width: 100%;
+    min-height: 145px;
+
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+
+    align-items: center;
+    gap: 70px;
+}
+
+.footer-brand strong {
+    font-size: 25px;
+}
+
+.footer-brand span {
+    margin-top: 7px;
+    font-size: 7px;
+    letter-spacing: 4px;
+}
+
+.footer-location {
+    text-align: center;
+}
+
+.footer-location span,
+.footer-contact span {
+    margin-bottom: 10px;
+    font-size: 7px;
+    letter-spacing: 3px;
+}
+
+.footer-location p {
+    font-size: 11px;
+}
+
+.footer-contact {
+    text-align: right;
+}
+
+.footer-contact a {
+    font-size: 22px;
+}
+
+/* RANDUL LEGAL */
+
+.footer-bottom {
+    width: 100%;
+    min-height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    border-top: 1px solid rgba(6, 61, 50, .12);
+}
+
+.footer-copyright {
+    flex-shrink: 0;
+
+    font-size: 9px;
+    color: #8d948e;
+}
+
+.footer-legal {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 28px;
+}
+
+.footer-legal a {
+    white-space: nowrap;
+
+    font-size: 9px;
+    color: #69736c;
+}
+
+/* ANPC + SAL */
+
+.footer-legal a:nth-last-child(-n+2) {
+    min-width: 62px;
+    height: 40px;
+
+    padding: 0 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(6, 61, 50, .18);
+    border-radius: 50px;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .footer-main {
+        padding: 40px 0;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-location,
+    .footer-contact {
+        text-align: left;
+    }
+
+    .footer-bottom {
+        padding: 30px 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-legal {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+}
+
+/* =========================================================
+   FOOTER FINAL
+========================================================= */
+
+.site-footer {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 1540px !important;
+
+    margin: 90px auto 0 !important;
+    padding: 0 !important;
+
+    display: block !important;
+
+    border-top: 1px solid rgba(6, 61, 50, .15);
+
+    color: #063d32;
+}
+
+/* =========================
+   RANDUL PRINCIPAL
+========================= */
+
+.footer-top {
+    width: 100%;
+    min-height: 150px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+/* BRAND */
+
+.footer-top .footer-brand {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+.footer-top .footer-brand strong {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 25px;
+    font-weight: 600;
+
+    color: #063d32;
+}
+
+.footer-top .footer-brand span {
+    margin-top: 6px;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: #76ae6d;
+}
+
+/* LOCATIE + TELEFON */
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+.footer-info > span {
+    margin-bottom: 10px;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: #76ae6d;
+}
+
+.footer-info p {
+    margin: 0 0 4px;
+
+    font-size: 11px;
+
+    color: #69736c;
+}
+
+.footer-info small {
+    font-size: 9px;
+
+    color: #929991;
+}
+
+/* TELEFON */
+
+.footer-phone {
+    align-items: flex-end;
+
+    text-align: right;
+}
+
+.footer-phone a {
+    margin-bottom: 4px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 23px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    color: #063d32;
+
+    text-decoration: none;
+
+    transition: color .25s ease;
+}
+
+.footer-phone a:hover {
+    color: #76ae6d;
+}
+
+/* =========================
+   RANDUL LEGAL
+========================= */
+
+.footer-legal-row {
+    width: 100%;
+    min-height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    border-top: 1px solid rgba(6, 61, 50, .10);
+}
+
+.footer-legal-row > p {
+    margin: 0;
+
+    font-size: 9px;
+
+    color: #949a94;
+
+    white-space: nowrap;
+}
+
+/* LINKURI */
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 28px;
+}
+
+.footer-links a {
+    font-size: 9px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    color: #69736c;
+
+    text-decoration: none;
+
+    transition:
+        color .25s ease,
+        border-color .25s ease,
+        background .25s ease;
+}
+
+.footer-links a:hover {
+    color: #063d32;
+}
+
+/* ANPC + SAL */
+
+.footer-links .footer-anpc {
+    min-width: 70px;
+    height: 40px;
+
+    padding: 0 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(6, 61, 50, .18);
+
+    border-radius: 50px;
+
+    color: #063d32;
+}
+
+.footer-links .footer-anpc:hover {
+    border-color: #76ae6d;
+
+    background: rgba(118, 174, 109, .08);
+}
+
+/* =========================
+   TABLETA
+========================= */
+
+@media (max-width: 900px) {
+
+    .footer-top {
+        padding: 45px 0;
+
+        grid-template-columns: 1fr;
+
+        gap: 32px;
+    }
+
+    .footer-info,
+    .footer-phone {
+        align-items: flex-start;
+
+        text-align: left;
+    }
+
+    .footer-legal-row {
+        padding: 30px 0;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+    }
+
+    .footer-links {
+        justify-content: flex-start;
+
+        flex-wrap: wrap;
+
+        gap: 18px 22px;
+    }
+}
+
+/* =========================
+   TELEFON
+========================= */
+
+@media (max-width: 520px) {
+
+    .footer-top .footer-brand strong {
+        font-size: 23px;
+    }
+
+    .footer-phone a {
+        font-size: 21px;
+    }
+
+    .footer-links {
+        gap: 15px 18px;
+    }
+
+    .footer-legal-row > p {
+        white-space: normal;
+        line-height: 1.6;
+    }
+}
+
+/* FOOTER - TEXT MAI VIZIBIL */
+
+.footer-top .footer-brand strong {
+    font-weight: 700;
+}
+
+.footer-top .footer-brand span {
+    font-weight: 800;
+}
+
+.footer-info > span {
+    font-weight: 800;
+}
+
+.footer-info p {
+    font-weight: 600;
+    color: #53665d;
+}
+
+.footer-info small {
+    font-weight: 500;
+    color: #737d76;
+}
+
+.footer-phone a {
+    font-weight: 700;
+}
+
+.footer-legal-row > p {
+    font-weight: 500;
+    color: #737d76;
+}
+
+.footer-links a {
+    font-weight: 700;
+    color: #53665d;
+}
+
+.footer-links .footer-anpc {
+    font-weight: 800;
+}
+
+/* =========================================================
+   MOBILE - PASTRAVARIA
+========================================================= */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* ================= NAV ================= */
+
+    .navbar {
+        width: calc(100% - 24px);
+        top: 12px;
+        left: 12px;
+        right: 12px;
+
+        border-radius: 22px;
+    }
+
+    .nav-inner {
+        min-height: 68px;
+        padding: 0 18px;
+    }
+
+    /* Ascundem meniul mare pe telefon */
+    .nav-links {
+        display: none;
+    }
+
+    /* Logo mai compact */
+    .logo {
+        transform: scale(.88);
+        transform-origin: left center;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+    position: relative !important;
+
+    width: 100% !important;
+    min-height: 100svh !important;
+
+    overflow: hidden !important;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(2, 31, 25, .78) 0%,
+            rgba(3, 38, 30, .42) 38%,
+            rgba(3, 38, 30, .08) 70%,
+            rgba(2, 29, 23, .10) 100%
+        ),
+        url("images/hero-pastrav-mobile.png") !important;
+
+    background-size: cover !important;
+
+    background-position: center center !important;
+
+    background-repeat: no-repeat !important;
+
+    background-attachment: scroll !important;
+}
+
+    /* ================= PASTRAV VIU ================= */
+
+    .product-section {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .product-section h2 {
+        font-size: clamp(50px, 14vw, 75px);
+        line-height: .9;
+        letter-spacing: -3px;
+    }
+
+    /* ================= POVESTE ================= */
+
+    .story-section {
+        min-height: auto;
+        padding: 75px 20px;
+    }
+
+    .story-content {
+        width: 100%;
+    }
+
+    .story-panel {
+        width: 100%;
+        padding: 38px 25px;
+
+        border-radius: 28px;
+    }
+
+    .story-panel h2 {
+        font-size: clamp(45px, 13vw, 65px);
+        line-height: .93;
+        letter-spacing: -2px;
+    }
+
+    /* ================= CONTACT ================= */
+
+    .contact-section {
+        padding:
+            80px
+            22px
+            0;
+    }
+
+    .contact-wrapper {
+        display: block;
+    }
+
+    .contact-left {
+        width: 100%;
+    }
+
+    .contact-left h2 {
+        font-size: clamp(55px, 15vw, 78px);
+        line-height: .88;
+        letter-spacing: -3px;
+
+        white-space: normal;
+    }
+
+    .contact-left h2 em {
+        white-space: normal;
+    }
+
+    .contact-details {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-detail {
+        min-height: auto;
+
+        padding: 25px 0;
+    }
+
+    .contact-detail + .contact-detail {
+        padding: 25px 0;
+
+        border-left: 0;
+        border-top: 1px solid rgba(6, 61, 50, .17);
+    }
+
+    .contact-call-btn {
+        width: 100%;
+        max-width: 330px;
+    }
+
+    /* CARD LOCATIE */
+
+    .contact-right {
+        width: 100%;
+        margin-top: 55px;
+    }
+
+    .location-card {
+        width: 100%;
+        min-height: 530px;
+
+        padding: 28px 24px;
+
+        border-radius: 28px;
+    }
+
+    .location-center {
+        padding-left: 5px;
+    }
+
+    .location-center h3 {
+        font-size: 48px;
+    }
+
+    /* ================= ACCES ================= */
+
+    .access-section {
+        margin-top: 80px;
+    }
+
+    .access-header {
+        display: block;
+    }
+
+    .access-header h3 {
+        font-size: 52px;
+        line-height: .9;
+    }
+
+    .access-header > p {
+        margin-top: 25px;
+    }
+
+    .access-image-wrapper {
+        height: auto;
+
+        margin-top: 30px;
+
+        border-radius: 24px;
+    }
+
+    .access-image-wrapper > img {
+        width: 100%;
+        height: auto;
+
+        object-fit: contain;
+    }
+
+    /* ================= FOOTER ================= */
+
+    .footer-top {
+        padding: 45px 0;
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .footer-info,
+    .footer-phone {
+        align-items: flex-start;
+
+        text-align: left;
+    }
+
+    .footer-legal-row {
+        padding: 30px 0;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 25px;
+    }
+
+    .footer-links {
+        justify-content: flex-start;
+
+        flex-wrap: wrap;
+
+        gap: 18px;
+    }
+
+}
+
+/* =========================================================
+   MOBILE HERO - FIX
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* MENIU LATERAL - INCHIS IMPLICIT */
+    .mobile-menu,
+    .menu-panel,
+    .nav-menu {
+        transform: translateX(-110%);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    .mobile-menu.active,
+    .menu-panel.active,
+    .nav-menu.active {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    /* HERO */
+    .hero {
+        width: 100%;
+        min-height: 100svh;
+        overflow: hidden;
+    }
+
+    .hero-container {
+        width: 100%;
+        min-height: 100svh;
+
+        padding: 135px 24px 70px;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .hero-copy {
+        position: relative;
+        z-index: 5;
+
+        width: 100%;
+        max-width: 350px;
+
+        margin: 0;
+        padding: 0;
+
+        transform: none !important;
+        left: auto !important;
+    }
+
+    .hero-copy h1 {
+        width: 100%;
+        margin: 0;
+
+        font-size: 58px;
+        line-height: .88;
+        letter-spacing: -3px;
+
+        white-space: normal;
+    }
+
+    .hero-copy h1 em {
+        display: block;
+    }
+
+    .hero-copy p {
+        width: 100%;
+        max-width: 320px;
+
+        margin-top: 25px;
+
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    /* PRET */
+
+    .price-line {
+        width: 100%;
+        margin-top: 28px;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        gap: 20px;
+    }
+
+    .price-line strong {
+        white-space: nowrap;
+    }
+
+    /* BUTON */
+
+    .hero-actions {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .hero-actions .contact-call-btn {
+        width: 100%;
+        max-width: 340px;
+
+        margin: 0;
+
+        box-sizing: border-box;
+    }
+
+    /* ASCUNDEM ELEMENTELE DESKTOP DIN DREAPTA */
+    .hero-benefits {
+        display: none;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .hero-copy h1 {
+        font-size: 50px !important;
+        line-height: 0.92 !important;
+        letter-spacing: -2px !important;
+        max-width: 340px;
+    }
+
+}
+
+/* =========================================================
+   NAVBAR MOBILE - CORECT
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        position: absolute !important;
+        top: 16px !important;
+        left: 16px !important;
+        right: 16px !important;
+
+        width: calc(100% - 32px) !important;
+        height: 68px !important;
+
+        border-radius: 34px !important;
+
+        background: rgba(3, 62, 51, .88) !important;
+        border: 1px solid rgba(255,255,255,.14) !important;
+
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+
+        overflow: visible !important;
+        z-index: 1000;
+    }
+
+    .nav-inner {
+        width: 100% !important;
+        height: 68px !important;
+        min-height: 68px !important;
+
+        padding: 0 10px 0 20px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        box-sizing: border-box;
+    }
+
+    /* LOGO */
+
+    .logo {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        transform: none !important;
+    }
+
+    .logo-icon {
+        display: none !important;
+    }
+
+    .logo-text {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .logo-text strong {
+        font-size: 14px !important;
+        line-height: 1 !important;
+        color: #ffffff !important;
+    }
+
+    .logo-text span {
+        margin-top: 5px !important;
+
+        font-size: 5px !important;
+        font-weight: 700 !important;
+        letter-spacing: 2.4px !important;
+
+        color: #b8e77d !important;
+    }
+
+    /* ASCUNDEM DESKTOP */
+
+    .desktop-nav,
+    .nav-order {
+        display: none !important;
+    }
+
+    /* BUTONUL REAL DE MOBIL */
+
+    .mobile-toggle {
+        position: relative !important;
+
+        width: 48px !important;
+        height: 48px !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 6px !important;
+
+        flex: 0 0 48px !important;
+
+        border: 1px solid rgba(255,255,255,.22) !important;
+        border-radius: 50% !important;
+
+        background: rgba(255,255,255,.06) !important;
+
+        cursor: pointer;
+        z-index: 1002;
+    }
+
+    .mobile-toggle span {
+        display: block !important;
+
+        width: 17px !important;
+        height: 1px !important;
+
+        margin: 0 !important;
+
+        background: #ffffff !important;
+
+        transition: .3s ease;
+    }
+
+}
+
+/* =========================================================
+   MOBILE NAV - OVERRIDE DEFINITIV
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        position: absolute !important;
+        top: 18px !important;
+        left: 0 !important;
+        right: 0 !important;
+
+        width: 100% !important;
+        height: 64px !important;
+
+        padding: 0 20px !important;
+        margin: 0 !important;
+
+        background: transparent !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+
+        overflow: visible !important;
+        box-sizing: border-box !important;
+    }
+
+    .nav-inner {
+        width: 100% !important;
+        max-width: none !important;
+        height: 64px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        background: transparent !important;
+        border: 0 !important;
+    }
+
+    /* BRAND STANGA */
+
+    .logo {
+        position: static !important;
+
+        display: flex !important;
+        align-items: center !important;
+
+        width: auto !important;
+        height: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+    }
+
+    .logo-icon {
+        display: none !important;
+    }
+
+    .logo-text {
+        display: flex !important;
+        flex-direction: column !important;
+
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .logo-text strong {
+        display: block !important;
+
+        font-family: "Playfair Display", Georgia, serif !important;
+        font-size: 17px !important;
+        font-weight: 700 !important;
+        line-height: 1 !important;
+
+        color: #ffffff !important;
+    }
+
+    .logo-text span {
+        display: block !important;
+
+        margin-top: 5px !important;
+
+        font-size: 5px !important;
+        font-weight: 700 !important;
+        letter-spacing: 2.4px !important;
+
+        color: #b8e77d !important;
+    }
+
+    /* ELEMENTE DESKTOP */
+
+    .desktop-nav,
+    .nav-order {
+        display: none !important;
+    }
+
+    /* HAMBURGER DREAPTA */
+
+    .mobile-toggle {
+        position: static !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        width: 52px !important;
+        height: 52px !important;
+        min-width: 52px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        gap: 6px !important;
+
+        border: 1px solid rgba(255,255,255,.32) !important;
+        border-radius: 50% !important;
+
+        background: rgba(3,63,52,.72) !important;
+
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+
+        box-shadow: 0 8px 25px rgba(0,0,0,.12);
+
+        z-index: 1002;
+    }
+
+    .mobile-toggle span {
+        display: block !important;
+
+        width: 18px !important;
+        height: 1px !important;
+
+        margin: 0 !important;
+
+        background: #ffffff !important;
+    }
+}
+
+/* =========================================================
+   MOBILE HERO - VARIANTA FINALĂ CURATĂ
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* HERO */
+    .hero {
+        position: relative !important;
+        width: 100% !important;
+        min-height: 100svh !important;
+        overflow: hidden !important;
+    }
+
+    /* ========================================
+       NAVBAR
+    ======================================== */
+
+    .navbar {
+        position: absolute !important;
+
+        top: 20px !important;
+        left: 20px !important;
+        right: 20px !important;
+
+        width: calc(100% - 40px) !important;
+        height: 56px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+
+        transform: none !important;
+
+        z-index: 100 !important;
+    }
+
+    .nav-inner {
+        width: 100% !important;
+        height: 56px !important;
+        min-height: 56px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        background: transparent !important;
+        border: 0 !important;
+
+        overflow: visible !important;
+    }
+
+    /* LOGO */
+
+    .logo {
+        display: flex !important;
+        align-items: center !important;
+
+        width: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        opacity: 1 !important;
+        visibility: visible !important;
+
+        transform: none !important;
+    }
+
+    .logo-icon {
+        display: none !important;
+    }
+
+    .logo-text {
+        display: flex !important;
+        flex-direction: column !important;
+
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .logo-text strong {
+        display: block !important;
+
+        font-family: "Playfair Display", Georgia, serif !important;
+        font-size: 17px !important;
+        font-weight: 700 !important;
+        line-height: 1 !important;
+
+        color: #fff !important;
+    }
+
+    .logo-text span {
+        display: block !important;
+
+        margin-top: 5px !important;
+
+        font-size: 5px !important;
+        font-weight: 700 !important;
+        letter-spacing: 2.4px !important;
+
+        color: #b8e77d !important;
+    }
+
+    /* MENIU DESKTOP OFF */
+
+    .desktop-nav,
+    .nav-order {
+        display: none !important;
+    }
+
+    /* HAMBURGER */
+
+    .mobile-toggle {
+        position: static !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        flex: 0 0 50px !important;
+
+        width: 50px !important;
+        height: 50px !important;
+        min-width: 50px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        gap: 6px !important;
+
+        border: 1px solid rgba(255,255,255,.28) !important;
+        border-radius: 50% !important;
+
+        background: rgba(3,63,52,.72) !important;
+
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+    }
+
+    .mobile-toggle span {
+        display: block !important;
+
+        width: 18px !important;
+        height: 1px !important;
+
+        margin: 0 !important;
+
+        background: #fff !important;
+    }
+
+    /* ========================================
+       CONȚINUT HERO
+    ======================================== */
+
+    .hero-container {
+        position: relative !important;
+
+        width: 100% !important;
+        min-height: 100svh !important;
+
+        margin: 0 !important;
+
+        padding:
+            155px
+            22px
+            55px !important;
+
+        display: block !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .hero-copy {
+        position: relative !important;
+        z-index: 5 !important;
+
+        width: 100% !important;
+        max-width: 350px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+
+        transform: none !important;
+    }
+
+    /* ========================================
+       EYEBROW
+    ======================================== */
+
+    .hero-copy .eyebrow {
+        margin: 0 0 20px !important;
+
+        font-size: 6px !important;
+        font-weight: 700 !important;
+
+        line-height: 1 !important;
+        letter-spacing: 3px !important;
+    }
+
+    /* ========================================
+       TITLU
+    ======================================== */
+
+    .hero-copy h1 {
+        display: block !important;
+
+        width: 100% !important;
+        max-width: 340px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        font-family: "Playfair Display", Georgia, serif !important;
+
+        font-size: 48px !important;
+        font-weight: 600 !important;
+
+        line-height: .92 !important;
+        letter-spacing: -2px !important;
+
+        white-space: normal !important;
+    }
+
+    /* forțăm exact cele 3 rânduri */
+
+    .hero-copy h1 em {
+        display: block !important;
+
+        margin: 2px 0 !important;
+
+        font-size: 46px !important;
+        font-weight: 500 !important;
+        line-height: .94 !important;
+
+        white-space: nowrap !important;
+    }
+
+    /* ========================================
+       DESCRIERE
+    ======================================== */
+
+    .hero-copy .description {
+        width: 100% !important;
+        max-width: 315px !important;
+
+        margin: 38px 0 0 !important;
+
+        font-size: 12px !important;
+        line-height: 1.65 !important;
+
+        color: rgba(255,255,255,.88) !important;
+    }
+
+    /* ========================================
+       PREȚ
+    ======================================== */
+
+    .price-line {
+        width: 100% !important;
+
+        margin: 42px 0 0 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+
+        gap: 24px !important;
+    }
+
+    .price-line span {
+        font-size: 6px !important;
+        font-weight: 700 !important;
+
+        letter-spacing: 3px !important;
+    }
+
+    .price-line strong {
+        font-size: 25px !important;
+        line-height: 1 !important;
+
+        white-space: nowrap !important;
+    }
+
+    /* ========================================
+       BUTON
+    ======================================== */
+
+    .hero-actions {
+        width: 100% !important;
+
+        margin: 42px 0 0 !important;
+    }
+
+    .hero-actions .contact-call-btn {
+        width: 100% !important;
+        max-width: 340px !important;
+        height: 58px !important;
+
+        margin: 0 !important;
+
+        box-sizing: border-box !important;
+    }
+
+    /* ========================================
+       ELEMENTE DESKTOP ASCUNSE
+    ======================================== */
+
+    .benefits {
+        display: none !important;
+    }
+
+    .scroll-indicator {
+        display: none !important;
+    }
+
+}
+
+/* CONȚINUT HERO */
+
+.hero-container {
+    position: relative !important;
+    width: 100% !important;
+    min-height: 100svh !important;
+
+    margin: 0 !important;
+
+    /* mai mult aer sub navbar */
+    padding: 155px 22px 55px !important;
+
+    display: block !important;
+    box-sizing: border-box !important;
+}
+
+/* TEXT MIC */
+
+.hero-copy .eyebrow {
+    margin: 0 0 24px !important;
+}
+
+/* TITLU */
+
+.hero-copy h1 {
+    width: 100% !important;
+    max-width: 340px !important;
+
+    margin: 0 !important;
+
+    font-size: 48px !important;
+    line-height: .94 !important;
+    letter-spacing: -2px !important;
+}
+
+.hero-copy h1 em {
+    display: block !important;
+
+    margin: 5px 0 6px !important;
+
+    font-size: 44px !important;
+    line-height: .96 !important;
+
+    white-space: nowrap !important;
+}
+
+/* DESCRIERE */
+
+.hero-copy .description {
+    width: 100% !important;
+    max-width: 315px !important;
+
+    margin: 38px 0 0 !important;
+
+    font-size: 12px !important;
+    line-height: 1.7 !important;
+}
+
+/* PREȚ */
+
+.price-line {
+    width: 100% !important;
+
+    margin: 40px 0 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 26px !important;
+}
+
+/* BUTON */
+
+.hero-actions {
+    width: 100% !important;
+
+    margin: 40px 0 0 !important;
+}
+
+/* =========================================================
+   LIVRARE LA DOMICILIU
+========================================================= */
+
+.delivery-section {
+    position: relative;
+    width: 100%;
+    padding: 120px 7%;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 82% 25%,
+            rgba(184, 231, 125, .12),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #043c32 0%,
+            #052f28 55%,
+            #03251f 100%
+        );
+
+    color: #ffffff;
+}
+
+/* CONȚINUT */
+
+.delivery-inner {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1450px;
+
+    margin: 0 auto;
+}
+
+/* TITLU */
+
+.delivery-top {
+    max-width: 850px;
+    margin-bottom: 65px;
+}
+
+.delivery-badge {
+    margin-bottom: 24px;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    color: #b8e77d;
+}
+
+.delivery-top h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(58px, 5.5vw, 90px);
+    font-weight: 600;
+
+    line-height: .94;
+    letter-spacing: -4px;
+
+    color: #f4f1e8;
+}
+
+.delivery-top h2 em {
+    display: block;
+
+    margin-top: 5px;
+
+    font-weight: 500;
+
+    color: #a7d779;
+}
+
+.delivery-intro {
+    max-width: 600px;
+
+    margin-top: 28px;
+
+    font-size: 14px;
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, .65);
+}
+
+/* =========================================================
+   CARDURI
+========================================================= */
+
+.delivery-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.delivery-card {
+    position: relative;
+
+    min-height: 330px;
+
+    padding: 42px;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(255, 255, 255, .11);
+
+    border-radius: 30px;
+
+    background:
+        rgba(255, 255, 255, .045);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, .10);
+}
+
+/* CARD ZĂRNEȘTI */
+
+.delivery-card-main {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(184, 231, 125, .13),
+            rgba(255, 255, 255, .035)
+        );
+}
+
+/* NUMĂR */
+
+.delivery-number {
+    position: absolute;
+
+    top: 35px;
+    right: 38px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 14px;
+
+    color: rgba(255, 255, 255, .30);
+}
+
+/* ICON */
+
+.delivery-icon {
+    width: 52px;
+    height: 52px;
+
+    margin-bottom: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid rgba(184, 231, 125, .32);
+
+    border-radius: 50%;
+
+    background:
+        rgba(184, 231, 125, .055);
+
+    font-size: 21px;
+
+    color: #b8e77d;
+}
+
+/* ETICHETĂ */
+
+.delivery-label {
+    display: block;
+
+    margin-bottom: 11px;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: #b8e77d;
+}
+
+/* TITLU CARD */
+
+.delivery-card h3 {
+    margin: 0 0 17px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 35px;
+    font-weight: 600;
+
+    color: #ffffff;
+}
+
+/* TEXT CARD */
+
+.delivery-card p {
+    max-width: 500px;
+
+    margin: 0;
+
+    font-size: 13px;
+    line-height: 1.75;
+
+    color: rgba(255, 255, 255, .66);
+}
+
+.delivery-card p strong {
+    color: #ffffff;
+}
+
+/* GRATUIT */
+
+.delivery-free {
+    display: inline-flex;
+
+    margin-top: 27px;
+
+    padding: 10px 18px;
+
+    border-radius: 100px;
+
+    background: #b8e77d;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #043c32;
+}
+
+/* NOTĂ 20 KM */
+
+.delivery-note {
+    display: block;
+
+    margin-top: 27px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    color: #b8e77d;
+}
+
+/* =========================================================
+   PREȚ + BUTON
+========================================================= */
+
+.delivery-bottom {
+    margin-top: 45px;
+    padding-top: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, .11);
+}
+
+.delivery-price {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.delivery-price span {
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: rgba(255, 255, 255, .48);
+}
+
+.delivery-price strong {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 34px;
+    font-weight: 600;
+
+    color: #ffffff;
+}
+
+/* BUTON */
+
+.delivery-call {
+    min-height: 62px;
+
+    padding: 0 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 17px;
+
+    border-radius: 100px;
+
+    background: #f3f0e7;
+
+    color: #073b30;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    text-decoration: none;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        background .3s ease;
+}
+
+.delivery-call:hover {
+    transform: translateY(-3px);
+
+    background: #ffffff;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, .18);
+}
+
+/* =========================================================
+   LIVRARE - MOBIL
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .delivery-section {
+        padding: 90px 20px;
+    }
+
+    .delivery-section::after {
+        right: -15px;
+        bottom: -20px;
+
+        font-size: 115px;
+    }
+
+    /* TITLU */
+
+    .delivery-top {
+        margin-bottom: 40px;
+    }
+
+    .delivery-badge {
+        margin-bottom: 19px;
+
+        font-size: 7px;
+
+        letter-spacing: 2.7px;
+    }
+
+    .delivery-top h2 {
+        font-size: 46px;
+
+        line-height: .97;
+
+        letter-spacing: -2px;
+    }
+
+    .delivery-top h2 em {
+        margin-top: 5px;
+    }
+
+    .delivery-intro {
+        margin-top: 23px;
+
+        font-size: 12.5px;
+
+        line-height: 1.7;
+    }
+
+    /* CARDURI */
+
+    .delivery-grid {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+    .delivery-card {
+        min-height: auto;
+
+        padding: 30px 26px;
+
+        border-radius: 25px;
+    }
+
+    .delivery-number {
+        top: 28px;
+        right: 28px;
+    }
+
+    .delivery-icon {
+        width: 46px;
+        height: 46px;
+
+        margin-bottom: 25px;
+
+        font-size: 18px;
+    }
+
+    .delivery-label {
+        font-size: 7px;
+
+        letter-spacing: 3px;
+    }
+
+    .delivery-card h3 {
+        font-size: 30px;
+    }
+
+    .delivery-card p {
+        font-size: 12px;
+
+        line-height: 1.7;
+    }
+
+    .delivery-free {
+        margin-top: 23px;
+    }
+
+    .delivery-note {
+        margin-top: 23px;
+
+        line-height: 1.5;
+    }
+
+    /* PREȚ + BUTON */
+
+    .delivery-bottom {
+        margin-top: 35px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .delivery-price {
+        align-items: center;
+    }
+
+    .delivery-price strong {
+        font-size: 31px;
+    }
+
+    .delivery-call {
+        width: 100%;
+
+        min-height: 60px;
+
+        padding: 0 18px;
+
+        box-sizing: border-box;
+    }
+
+}
+
+/* =========================================================
+   FUNDAL APĂ - SECȚIUNEA PĂSTRĂV
+========================================================= */
+
+.fish-section {
+    position: relative;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(2, 38, 31, .78) 0%,
+            rgba(3, 45, 37, .55) 38%,
+            rgba(2, 40, 35, .25) 65%,
+            rgba(2, 32, 28, .38) 100%
+        ),
+        url("images/fundal-apa.png") center center / cover no-repeat !important;
+
+    color: #ffffff;
+}
+
+/* TITLU */
+
+.fish-kicker {
+    color: #b8e77d !important;
+}
+
+.fish-intro h2 {
+    color: #ffffff !important;
+}
+
+.fish-intro h2 em {
+    color: #b8e77d !important;
+}
+
+/* TEXT */
+
+.fish-intro > p {
+    color: rgba(255, 255, 255, .82) !important;
+}
+
+/* CELE 3 INFORMAȚII */
+
+.fish-features {
+    border-top-color: rgba(255,255,255,.25) !important;
+    border-bottom-color: rgba(255,255,255,.25) !important;
+}
+
+.fish-features > div + div {
+    border-left-color: rgba(255,255,255,.20) !important;
+}
+
+.fish-features span {
+    color: #b8e77d !important;
+}
+
+.fish-features strong {
+    color: #ffffff !important;
+}
+
+.fish-features small,
+.fish-features .location-address {
+    color: rgba(255,255,255,.75) !important;
+}
+
+/* PĂSTRĂVUL RĂMÂNE VIZIBIL */
+
+/* ELIMINĂ CUVÂNTUL MARE PROASPĂT */
+
+/* =========================================================
+   PĂSTRĂV - FUNDAL CREM PREMIUM + BULE
+========================================================= */
+
+.fish-section {
+    position: relative !important;
+    overflow: hidden !important;
+
+    background:
+        radial-gradient(
+            circle at 68% 42%,
+            rgba(126, 169, 113, .13),
+            transparent 27%
+        ),
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(255, 255, 255, .75),
+            transparent 28%
+        ),
+        #f2efe6 !important;
+
+    color: #0a332a !important;
+}
+
+/* TEXTUL REVINE VERDE */
+
+.fish-kicker {
+    color: #34745f !important;
+}
+
+.fish-intro h2 {
+    color: #0a332a !important;
+}
+
+.fish-intro h2 em {
+    color: #6da567 !important;
+}
+
+.fish-intro > p {
+    color: #667a72 !important;
+}
+
+/* INFORMAȚII */
+
+.fish-features {
+    border-top-color: rgba(8, 51, 42, .18) !important;
+    border-bottom-color: rgba(8, 51, 42, .18) !important;
+}
+
+.fish-features > div + div {
+    border-left-color: rgba(8, 51, 42, .15) !important;
+}
+
+.fish-features span {
+    color: #75a967 !important;
+}
+
+.fish-features strong {
+    color: #0a332a !important;
+}
+
+.fish-features small {
+    color: #809087 !important;
+}
+
+.fish-features .location-address {
+    color: #426d5c !important;
+}
+
+/* PĂSTRĂVUL RĂMÂNE */
+
+.floating-trout {
+    display: block !important;
+}
+
+/* FĂRĂ CUVÂNTUL URIAȘ PROASPĂT */
+
+.fish-big-word {
+    display: none !important;
+}
+
+/* =========================================================
+   BULE
+========================================================= */
+
+.fish-bubbles {
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.fish-bubbles span {
+    position: absolute;
+
+    bottom: -100px;
+
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(72, 126, 108, .20);
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            rgba(255,255,255,.85),
+            rgba(255,255,255,.12) 35%,
+            rgba(92,145,125,.06) 70%
+        );
+
+    box-shadow:
+        inset 2px 2px 5px rgba(255,255,255,.55);
+
+    opacity: .55;
+
+    animation:
+        fishBubbleUp 14s linear infinite;
+}
+
+/* POZIȚII DIFERITE */
+
+.fish-bubbles span:nth-child(1) {
+    left: 7%;
+    width: 18px;
+    height: 18px;
+    animation-duration: 15s;
+}
+
+.fish-bubbles span:nth-child(2) {
+    left: 18%;
+    width: 9px;
+    height: 9px;
+    animation-duration: 11s;
+    animation-delay: -4s;
+}
+
+.fish-bubbles span:nth-child(3) {
+    left: 36%;
+    width: 27px;
+    height: 27px;
+    animation-duration: 18s;
+    animation-delay: -9s;
+}
+
+.fish-bubbles span:nth-child(4) {
+    left: 49%;
+    width: 12px;
+    height: 12px;
+    animation-duration: 13s;
+    animation-delay: -6s;
+}
+
+.fish-bubbles span:nth-child(5) {
+    left: 61%;
+    width: 20px;
+    height: 20px;
+    animation-duration: 16s;
+    animation-delay: -11s;
+}
+
+.fish-bubbles span:nth-child(6) {
+    left: 73%;
+    width: 8px;
+    height: 8px;
+    animation-duration: 10s;
+    animation-delay: -3s;
+}
+
+.fish-bubbles span:nth-child(7) {
+    left: 84%;
+    width: 31px;
+    height: 31px;
+    animation-duration: 19s;
+    animation-delay: -13s;
+}
+
+.fish-bubbles span:nth-child(8) {
+    left: 94%;
+    width: 14px;
+    height: 14px;
+    animation-duration: 12s;
+    animation-delay: -7s;
+}
+
+/* MIȘCARE */
+
+@keyframes fishBubbleUp {
+
+    0% {
+        transform:
+            translateY(0)
+            translateX(0)
+            scale(.7);
+
+        opacity: 0;
+    }
+
+    12% {
+        opacity: .5;
+    }
+
+    50% {
+        transform:
+            translateY(-55vh)
+            translateX(18px)
+            scale(1);
+    }
+
+    90% {
+        opacity: .35;
+    }
+
+    100% {
+        transform:
+            translateY(-115vh)
+            translateX(-10px)
+            scale(1.15);
+
+        opacity: 0;
+    }
+}
+
+/* CONȚINUTUL STĂ PESTE BULE */
+
+.fish-section-inner {
+    position: relative !important;
+    z-index: 3 !important;
+}
+
+/* MOBIL */
+
+@media (max-width: 768px) {
+
+    .fish-bubbles span {
+        opacity: .40;
+    }
+
+    .fish-bubbles span:nth-child(1),
+    .fish-bubbles span:nth-child(3),
+    .fish-bubbles span:nth-child(7) {
+        display: none;
+    }
+
+}
+
+/* =========================================================
+   HERO DESKTOP - TEXT MAI MARE ȘI MAI AERISIT
+========================================================= */
+
+@media (min-width: 769px) {
+
+    .hero-container {
+        width: 100% !important;
+        max-width: none !important;
+
+        padding-left: clamp(70px, 6vw, 125px) !important;
+        padding-right: clamp(70px, 6vw, 125px) !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .hero-copy {
+        width: 560px !important;
+        max-width: 42vw !important;
+    }
+
+    .hero-copy .eyebrow {
+        margin-bottom: 28px !important;
+
+        font-size: 10px !important;
+        letter-spacing: 5px !important;
+    }
+
+    .hero-copy h1 {
+        max-width: 560px !important;
+
+        margin: 0 !important;
+
+        font-size: clamp(64px, 4.5vw, 82px) !important;
+        line-height: .91 !important;
+        letter-spacing: -3px !important;
+    }
+
+    .hero-copy h1 em {
+        display: block !important;
+
+        margin: 7px 0 !important;
+
+        font-size: .90em !important;
+        line-height: .94 !important;
+    }
+
+    .hero-copy .description {
+        width: 100% !important;
+        max-width: 500px !important;
+
+        margin-top: 38px !important;
+
+        font-size: 16px !important;
+        line-height: 1.75 !important;
+
+        color: rgba(255,255,255,.88) !important;
+    }
+
+    .price-line {
+        margin-top: 38px !important;
+        gap: 35px !important;
+    }
+
+    .price-line span {
+        font-size: 9px !important;
+        letter-spacing: 4px !important;
+    }
+
+    .price-line strong {
+        font-size: 29px !important;
+    }
+
+    .hero-actions {
+        margin-top: 34px !important;
+    }
+
+    .hero-actions .contact-call-btn {
+        min-width: 300px !important;
+        min-height: 66px !important;
+
+        padding: 0 28px !important;
+
+        font-size: 11px !important;
+    }
+
+}
+
+/* HERO DESKTOP - BENEFICII MAI VIZIBILE */
+
+@media (min-width: 769px) {
+
+    .benefits {
+        right: 6% !important;
+        width: 310px !important;
+        gap: 26px !important;
+    }
+
+    .benefit {
+        gap: 18px !important;
+    }
+
+    .benefit-icon {
+        width: 56px !important;
+        height: 56px !important;
+        min-width: 56px !important;
+
+        font-size: 18px !important;
+    }
+
+    .benefit-text {
+        min-width: 190px !important;
+    }
+
+    .benefit-text .number {
+        font-size: 12px !important;
+    }
+
+    .benefit-text strong {
+        font-size: 16px !important;
+    }
+
+    .benefit-text p {
+        margin-top: 4px !important;
+        font-size: 12px !important;
+    }
+}
+
+/* =========================================================
+   HERO - ANUNȚ LIVRARE
+========================================================= */
+
+.hero-delivery-news {
+    width: min(500px, 100%);
+
+    margin: 0 0 30px;
+
+    padding: 15px 18px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    border:
+        1px solid rgba(255,255,255,.18);
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            110deg,
+            rgba(3, 65, 53, .78),
+            rgba(3, 54, 45, .48)
+        );
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.15);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    text-decoration: none;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        background .25s ease;
+}
+
+.hero-delivery-news:hover {
+    transform: translateY(-2px);
+
+    border-color:
+        rgba(184,231,125,.45);
+
+    background:
+        linear-gradient(
+            110deg,
+            rgba(3, 72, 59, .90),
+            rgba(3, 58, 48, .60)
+        );
+}
+
+/* ICON */
+
+.hero-delivery-icon {
+    width: 43px;
+    height: 43px;
+    min-width: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(184,231,125,.12);
+
+    border:
+        1px solid rgba(184,231,125,.30);
+
+    font-size: 18px;
+}
+
+/* TEXT */
+
+.hero-delivery-content {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.hero-delivery-content small {
+    font-size: 7px;
+    font-weight: 800;
+
+    letter-spacing: 2.2px;
+
+    color: #b8e77d;
+}
+
+.hero-delivery-content strong {
+    font-size: 13px;
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+.hero-delivery-content em {
+    font-size: 9px;
+    font-style: normal;
+
+    color: rgba(255,255,255,.65);
+}
+
+/* SĂGEATĂ */
+
+.hero-delivery-arrow {
+    margin-left: auto;
+
+    padding-left: 10px;
+
+    font-size: 18px;
+
+    color: #b8e77d;
+
+    transition: transform .25s ease;
+}
+
+.hero-delivery-news:hover .hero-delivery-arrow {
+    transform: translateX(4px);
+}
+
+/* =========================================================
+   ANUNȚ LIVRARE - MOBIL
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero-delivery-news {
+        width: 100%;
+
+        margin-bottom: 23px;
+
+        padding: 12px 13px;
+
+        gap: 11px;
+
+        border-radius: 16px;
+
+        box-sizing: border-box;
+    }
+
+    .hero-delivery-icon {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+
+        font-size: 15px;
+    }
+
+    .hero-delivery-content small {
+        font-size: 6px;
+        letter-spacing: 1.5px;
+    }
+
+    .hero-delivery-content strong {
+        font-size: 11px;
+        line-height: 1.3;
+    }
+
+    .hero-delivery-content em {
+        display: none;
+    }
+
+    .hero-delivery-arrow {
+        font-size: 15px;
+    }
+
+}
+
+/* =========================================================
+   PĂSTRĂV - AJUSTARE DESKTOP FINAL
+========================================================= */
+
+@media (min-width: 769px) {
+
+    /* Păstrăv - poziția originală */
+    .floating-trout {
+        display: block !important;
+    }
+
+    /* Card preț */
+    .fish-card {
+        min-height: auto !important;
+        padding: 42px 40px !important;
+    }
+
+    .fish-card-label {
+        margin-bottom: 30px !important;
+    }
+
+    .fish-price {
+        margin-bottom: 25px !important;
+    }
+
+    .fish-card-line {
+        margin: 25px 0 28px !important;
+    }
+
+    .fish-card h3 {
+        margin-bottom: 14px !important;
+    }
+
+    .fish-card p {
+        margin-bottom: 28px !important;
+    }
+}
+
+/* =========================================================
+   DATE FIRMĂ — FOOTER
+========================================================= */
+
+.footer-company {
+    width: 100%;
+
+    min-height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 35px;
+
+    border-top: 1px solid rgba(6, 61, 50, .10);
+}
+
+.footer-company-label {
+    flex-shrink: 0;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #76ae6d;
+}
+
+.footer-company-details {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    flex-wrap: wrap;
+
+    gap: 13px;
+
+    font-size: 9px;
+
+    color: #7c857e;
+}
+
+.footer-company-details strong {
+    font-family: "DM Sans", Arial, sans-serif;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    color: #063d32;
+}
+
+.footer-company-dot {
+    width: 3px;
+    height: 3px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #76ae6d;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 850px) {
+
+    .footer-company {
+        padding: 25px 0;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 13px;
+    }
+
+    .footer-company-details {
+        justify-content: flex-start;
+
+        gap: 9px 11px;
+
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .footer-company-details {
+        display: block;
+    }
+
+    .footer-company-details > * {
+        display: block;
+
+        margin-bottom: 5px;
+    }
+
+    .footer-company-dot {
+        display: none;
+    }
+}

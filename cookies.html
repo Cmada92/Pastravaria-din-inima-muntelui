@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Politica de Cookies | Păstrăvăria – Din Inima Muntelui</title>
+
+    <meta
+        name="description"
+        content="Politica privind utilizarea cookie-urilor pe site-ul Păstrăvăria – Din Inima Muntelui."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        body {
+            margin: 0;
+            background: #f3f0e7;
+            color: #063d32;
+        }
+
+        .legal-page {
+            min-height: 100vh;
+            padding: 45px 7% 100px;
+
+            background:
+                radial-gradient(
+                    circle at 85% 10%,
+                    rgba(118, 174, 109, .12),
+                    transparent 28%
+                ),
+                #f3f0e7;
+        }
+
+
+        /* NAV */
+
+        .legal-nav {
+            width: 100%;
+            max-width: 1450px;
+            margin: 0 auto 100px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .legal-logo {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+        }
+
+        .legal-logo strong {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 22px;
+            color: #063d32;
+        }
+
+        .legal-logo span {
+            margin-top: 4px;
+            font-family: "DM Sans", sans-serif;
+            font-size: 6px;
+            font-weight: 700;
+            letter-spacing: 3.5px;
+            color: #76ae6d;
+        }
+
+        .back-home {
+            padding: 13px 20px;
+
+            border: 1px solid rgba(6, 61, 50, .16);
+            border-radius: 50px;
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 1px;
+
+            color: #063d32;
+            text-decoration: none;
+
+            transition: .25s ease;
+        }
+
+        .back-home:hover {
+            background: #063d32;
+            color: #ffffff;
+        }
+
+
+        /* HEADER */
+
+        .legal-header {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto 75px;
+        }
+
+        .legal-kicker {
+            display: block;
+            margin-bottom: 22px;
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 7px;
+            font-weight: 700;
+            letter-spacing: 5px;
+
+            color: #76ae6d;
+        }
+
+        .legal-header h1 {
+            margin: 0;
+
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(60px, 8vw, 125px);
+            line-height: .88;
+            letter-spacing: -5px;
+            font-weight: 500;
+
+            color: #063d32;
+        }
+
+        .legal-header h1 em {
+            display: block;
+            color: #76ae6d;
+            font-weight: 500;
+        }
+
+        .legal-intro {
+            max-width: 680px;
+            margin: 35px 0 0;
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 14px;
+            line-height: 1.9;
+
+            color: #707971;
+        }
+
+
+        /* CONTENT */
+
+        .legal-content {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: 230px 1fr;
+            gap: 80px;
+
+            padding-top: 60px;
+
+            border-top: 1px solid rgba(6, 61, 50, .15);
+        }
+
+        .legal-side {
+            position: sticky;
+            top: 40px;
+            height: fit-content;
+        }
+
+        .legal-side span {
+            display: block;
+            margin-bottom: 10px;
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 7px;
+            font-weight: 700;
+            letter-spacing: 3px;
+
+            color: #76ae6d;
+        }
+
+        .legal-side strong {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 20px;
+            font-weight: 600;
+
+            color: #063d32;
+        }
+
+        .legal-text section {
+            padding-bottom: 48px;
+            margin-bottom: 48px;
+
+            border-bottom: 1px solid rgba(6, 61, 50, .09);
+        }
+
+        .legal-text section:last-child {
+            border-bottom: none;
+        }
+
+        .legal-text h2 {
+            margin: 0 0 20px;
+
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 30px;
+            font-weight: 600;
+
+            color: #063d32;
+        }
+
+        .legal-text p,
+        .legal-text li {
+            font-family: "DM Sans", sans-serif;
+            font-size: 13px;
+            line-height: 1.9;
+
+            color: #68736b;
+        }
+
+        .legal-text ul {
+            padding-left: 20px;
+        }
+
+        .legal-text a {
+            color: #063d32;
+            font-weight: 700;
+        }
+
+
+        /* INFO BOX */
+
+        .cookie-box {
+            margin-top: 25px;
+            padding: 28px 30px;
+
+            border: 1px solid rgba(6, 61, 50, .12);
+            border-radius: 22px;
+
+            background: rgba(255, 255, 255, .35);
+        }
+
+        .cookie-box strong {
+            display: block;
+            margin-bottom: 8px;
+
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 20px;
+
+            color: #063d32;
+        }
+
+        .cookie-box p {
+            margin: 0;
+        }
+
+
+        /* FOOTER */
+
+        .legal-footer {
+            width: 100%;
+            max-width: 1100px;
+
+            margin: 80px auto 0;
+            padding-top: 35px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+
+            border-top: 1px solid rgba(6, 61, 50, .14);
+
+            font-family: "DM Sans", sans-serif;
+        }
+
+        .legal-footer p {
+            margin: 0;
+            font-size: 9px;
+            color: #8a928b;
+        }
+
+        .legal-footer a {
+            font-size: 9px;
+            font-weight: 700;
+
+            color: #063d32;
+            text-decoration: none;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .legal-page {
+                padding: 30px 7% 70px;
+            }
+
+            .legal-nav {
+                margin-bottom: 70px;
+            }
+
+            .legal-header h1 {
+                font-size: clamp(52px, 15vw, 80px);
+                letter-spacing: -3px;
+            }
+
+            .legal-content {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .legal-side {
+                position: static;
+            }
+
+            .legal-footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<main class="legal-page">
+
+    <!-- NAV -->
+
+    <nav class="legal-nav">
+
+        <a href="index.html" class="legal-logo">
+            <strong>PĂSTRĂVĂRIA</strong>
+            <span>DIN INIMA MUNTELUI</span>
+        </a>
+
+        <a href="index.html" class="back-home">
+            ← ÎNAPOI LA SITE
+        </a>
+
+    </nav>
+
+
+    <!-- HEADER -->
+
+    <header class="legal-header">
+
+        <span class="legal-kicker">
+            INFORMAȚII PRIVIND SITE-UL
+        </span>
+
+        <h1>
+            Politica de
+            <em>cookies.</em>
+        </h1>
+
+        <p class="legal-intro">
+            Această pagină explică ce sunt cookie-urile și modul în care
+            acestea pot fi utilizate pe site-ul Păstrăvăria – Din Inima
+            Muntelui.
+        </p>
+
+    </header>
+
+
+    <!-- CONTENT -->
+
+    <div class="legal-content">
+
+        <aside class="legal-side">
+
+            <span>ACTUALIZAT</span>
+
+            <strong>
+                Octombrie 2026
+            </strong>
+
+        </aside>
+
+
+        <div class="legal-text">
+
+
+            <section>
+
+                <h2>1. Ce sunt cookie-urile</h2>
+
+                <p>
+                    Cookie-urile sunt fișiere de mici dimensiuni care pot
+                    fi stocate pe dispozitivul utilizatorului atunci când
+                    acesta vizitează un site web.
+                </p>
+
+                <p>
+                    Acestea pot fi utilizate pentru funcționarea tehnică
+                    a site-ului, memorarea anumitor preferințe sau,
+                    atunci când sunt implementate astfel de servicii,
+                    pentru măsurarea audienței și alte funcționalități.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>2. Situația actuală a site-ului</h2>
+
+                <p>
+                    În forma actuală, site-ul Păstrăvăria – Din Inima
+                    Muntelui are în principal rol de prezentare și oferă
+                    posibilitatea contactării telefonice pentru comenzi.
+                </p>
+
+                <div class="cookie-box">
+
+                    <strong>
+                        Site de prezentare
+                    </strong>
+
+                    <p>
+                        Site-ul nu oferă în prezent conturi de utilizator,
+                        plasarea comenzilor online sau efectuarea plăților
+                        online.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section>
+
+                <h2>3. Cookie-uri strict necesare</h2>
+
+                <p>
+                    În funcție de configurația tehnică și serviciul de
+                    găzduire utilizat, pot exista tehnologii strict
+                    necesare pentru funcționarea, securitatea sau
+                    furnizarea corectă a site-ului.
+                </p>
+
+                <p>
+                    Astfel de tehnologii sunt utilizate exclusiv pentru
+                    funcționarea serviciului solicitat de utilizator și
+                    nu în scop de publicitate comportamentală.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>4. Cookie-uri de analiză și marketing</h2>
+
+                <p>
+                    În prezent, site-ul nu este configurat de noi pentru
+                    utilizarea unor servicii de analiză sau publicitate
+                    precum Google Analytics ori Meta Pixel.
+                </p>
+
+                <p>
+                    Dacă astfel de servicii vor fi introduse în viitor,
+                    această politică va fi actualizată, iar atunci când
+                    legislația o impune, utilizatorului îi va fi solicitat
+                    consimțământul înainte de activarea cookie-urilor
+                    neesențiale.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>5. Servicii externe</h2>
+
+                <p>
+                    Site-ul poate conține legături către servicii externe,
+                    de exemplu Google Maps, ANPC sau alte pagini web.
+                </p>
+
+                <p>
+                    Atunci când utilizatorul accesează un astfel de link,
+                    părăsește site-ul nostru și interacțiunea ulterioară
+                    este supusă politicilor și condițiilor serviciului
+                    extern respectiv.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>6. Google Fonts</h2>
+
+                <p>
+                    Site-ul poate încărca fonturi furnizate prin serviciul
+                    Google Fonts. În funcție de modul tehnic în care sunt
+                    încărcate aceste resurse, browserul utilizatorului
+                    poate realiza o conexiune către infrastructura
+                    furnizorului respectiv.
+                </p>
+
+                <p>
+                    Această politică poate fi actualizată dacă fonturile
+                    sau alte resurse externe vor fi găzduite local ori
+                    dacă modalitatea tehnică de funcționare a site-ului
+                    se modifică.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>7. Cum puteți controla cookie-urile</h2>
+
+                <p>
+                    Majoritatea browserelor permit utilizatorilor să
+                    vizualizeze, blocheze sau șteargă cookie-urile din
+                    setările browserului.
+                </p>
+
+                <p>
+                    Dezactivarea anumitor tehnologii strict necesare poate
+                    afecta funcționarea corectă a unor site-uri.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>8. Modificări viitoare</h2>
+
+                <p>
+                    În cazul în care site-ul va utiliza în viitor servicii
+                    suplimentare, cum ar fi instrumente de analiză,
+                    publicitate, formulare avansate sau alte tehnologii
+                    care implică stocarea ori accesarea informațiilor de
+                    pe dispozitivul utilizatorului, această politică va
+                    fi actualizată.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>9. Protecția datelor</h2>
+
+                <p>
+                    Pentru informații suplimentare despre modul în care
+                    sunt prelucrate datele cu caracter personal,
+                    consultați
+                    <a href="confidentialitate.html">
+                        Politica de confidențialitate
+                    </a>.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>10. Contact</h2>
+
+                <p>
+                    Pentru întrebări referitoare la funcționarea site-ului
+                    sau la această politică ne puteți contacta la:
+                </p>
+
+                <p>
+                    <strong>
+                        Păstrăvăria – Din Inima Muntelui
+                    </strong>
+
+                    <br>
+
+                    Strada Toplița nr. 52B
+
+                    <br>
+
+                    Zărnești, Brașov
+
+                    <br><br>
+
+                    Telefon:
+
+                    <a href="tel:+40741078941">
+                        0741 078 941
+                    </a>
+                </p>
+
+            </section>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer class="legal-footer">
+
+        <p>
+            © 2026 Păstrăvăria · Din Inima Muntelui
+        </p>
+
+        <a href="index.html">
+            Înapoi la pagina principală →
+        </a>
+
+    </footer>
+
+</main>
+
+</body>
+
+</html>

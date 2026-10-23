@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Politica de confidențialitate | Păstrăvăria – Din Inima Muntelui</title>
+
+    <meta
+        name="description"
+        content="Politica de confidențialitate și informații privind protecția datelor cu caracter personal."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        body {
+            margin: 0;
+            background: #f3f0e7;
+            color: #063d32;
+        }
+
+        .legal-page {
+            min-height: 100vh;
+            padding: 45px 7% 100px;
+
+            background:
+                radial-gradient(
+                    circle at 85% 10%,
+                    rgba(118, 174, 109, .12),
+                    transparent 28%
+                ),
+                #f3f0e7;
+        }
+
+
+        /* NAV */
+
+        .legal-nav {
+            width: 100%;
+            max-width: 1450px;
+            margin: 0 auto 100px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .legal-logo {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+        }
+
+        .legal-logo strong {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 22px;
+            color: #063d32;
+        }
+
+        .legal-logo span {
+            margin-top: 4px;
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 6px;
+            font-weight: 700;
+            letter-spacing: 3.5px;
+
+            color: #76ae6d;
+        }
+
+        .back-home {
+            padding: 13px 20px;
+
+            border: 1px solid rgba(6, 61, 50, .16);
+            border-radius: 50px;
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 1px;
+
+            color: #063d32;
+            text-decoration: none;
+
+            transition: .25s ease;
+        }
+
+        .back-home:hover {
+            background: #063d32;
+            color: #fff;
+        }
+
+
+        /* HEADER */
+
+        .legal-header {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto 75px;
+        }
+
+        .legal-kicker {
+            display: block;
+            margin-bottom: 22px;
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 7px;
+            font-weight: 700;
+            letter-spacing: 5px;
+
+            color: #76ae6d;
+        }
+
+        .legal-header h1 {
+            margin: 0;
+
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(60px, 8vw, 125px);
+            line-height: .88;
+            letter-spacing: -5px;
+            font-weight: 500;
+
+            color: #063d32;
+        }
+
+        .legal-header h1 em {
+            display: block;
+            color: #76ae6d;
+            font-weight: 500;
+        }
+
+        .legal-intro {
+            max-width: 690px;
+            margin: 35px 0 0;
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 14px;
+            line-height: 1.9;
+
+            color: #707971;
+        }
+
+
+        /* CONTENT */
+
+        .legal-content {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: 230px 1fr;
+            gap: 80px;
+
+            padding-top: 60px;
+
+            border-top: 1px solid rgba(6, 61, 50, .15);
+        }
+
+        .legal-side {
+            position: sticky;
+            top: 40px;
+            height: fit-content;
+        }
+
+        .legal-side span {
+            display: block;
+            margin-bottom: 10px;
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 7px;
+            font-weight: 700;
+            letter-spacing: 3px;
+
+            color: #76ae6d;
+        }
+
+        .legal-side strong {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 20px;
+            font-weight: 600;
+
+            color: #063d32;
+        }
+
+        .legal-text section {
+            padding-bottom: 48px;
+            margin-bottom: 48px;
+
+            border-bottom: 1px solid rgba(6, 61, 50, .09);
+        }
+
+        .legal-text section:last-child {
+            border-bottom: none;
+        }
+
+        .legal-text h2 {
+            margin: 0 0 20px;
+
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 30px;
+            font-weight: 600;
+
+            color: #063d32;
+        }
+
+        .legal-text p,
+        .legal-text li {
+            font-family: "DM Sans", sans-serif;
+            font-size: 13px;
+            line-height: 1.9;
+
+            color: #68736b;
+        }
+
+        .legal-text ul {
+            padding-left: 20px;
+        }
+
+        .legal-text a {
+            color: #063d32;
+            font-weight: 700;
+        }
+
+
+        /* BOX OPERATOR */
+
+        .company-box {
+            margin-top: 25px;
+            padding: 25px 28px;
+
+            border: 1px solid rgba(6, 61, 50, .12);
+            border-radius: 20px;
+
+            background: rgba(255,255,255,.32);
+        }
+
+        .company-box p {
+            margin: 5px 0;
+        }
+
+        .company-box strong {
+            color: #063d32;
+        }
+
+
+        /* FOOTER */
+
+        .legal-footer {
+            width: 100%;
+            max-width: 1100px;
+
+            margin: 80px auto 0;
+            padding-top: 35px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+
+            border-top: 1px solid rgba(6,61,50,.14);
+
+            font-family: "DM Sans", sans-serif;
+        }
+
+        .legal-footer p {
+            margin: 0;
+            font-size: 9px;
+            color: #8a928b;
+        }
+
+        .legal-footer a {
+            font-size: 9px;
+            font-weight: 700;
+
+            color: #063d32;
+            text-decoration: none;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .legal-page {
+                padding: 30px 7% 70px;
+            }
+
+            .legal-nav {
+                margin-bottom: 70px;
+            }
+
+            .legal-header h1 {
+                font-size: clamp(52px, 15vw, 80px);
+                letter-spacing: -3px;
+            }
+
+            .legal-content {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .legal-side {
+                position: static;
+            }
+
+            .legal-footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<main class="legal-page">
+
+    <!-- NAV -->
+    <nav class="legal-nav">
+
+        <a href="index.html" class="legal-logo">
+            <strong>PĂSTRĂVĂRIA</strong>
+            <span>DIN INIMA MUNTELUI</span>
+        </a>
+
+        <a href="index.html" class="back-home">
+            ← ÎNAPOI LA SITE
+        </a>
+
+    </nav>
+
+
+    <!-- HEADER -->
+    <header class="legal-header">
+
+        <span class="legal-kicker">
+            PROTECȚIA DATELOR
+        </span>
+
+        <h1>
+            Politica de
+            <em>confidențialitate.</em>
+        </h1>
+
+        <p class="legal-intro">
+            Respectăm confidențialitatea persoanelor care ne contactează
+            și protejăm datele cu caracter personal în conformitate cu
+            legislația aplicabilă.
+        </p>
+
+    </header>
+
+
+    <div class="legal-content">
+
+        <aside class="legal-side">
+            <span>ACTUALIZAT</span>
+            <strong>Octombrie 2026</strong>
+        </aside>
+
+
+        <div class="legal-text">
+
+
+            <section>
+
+                <h2>1. Cine este operatorul datelor</h2>
+
+                <p>
+                    Operatorul datelor cu caracter personal prelucrate
+                    în legătură cu activitatea „Păstrăvăria – Din Inima
+                    Muntelui” este:
+                </p>
+
+                <div class="company-box">
+
+                    <p>
+                        <strong>Operator:</strong>
+                        DE COMPLETAT
+                    </p>
+
+                    <p>
+                        <strong>CUI/CIF:</strong>
+                        DE COMPLETAT
+                    </p>
+
+                    <p>
+                        <strong>Sediu social:</strong>
+                        DE COMPLETAT
+                    </p>
+
+                    <p>
+                        <strong>Punct de lucru:</strong>
+                        Strada Toplița nr. 52B, Zărnești, Brașov
+                    </p>
+
+                    <p>
+                        <strong>Telefon:</strong>
+                        0741 078 941
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section>
+
+                <h2>2. Ce date putem prelucra</h2>
+
+                <p>
+                    În funcție de modul în care interacționați cu noi,
+                    putem prelucra date precum:
+                </p>
+
+                <ul>
+                    <li>numele și prenumele;</li>
+                    <li>numărul de telefon;</li>
+                    <li>informațiile comunicate în legătură cu o comandă;</li>
+                    <li>
+                        alte informații pe care ni le transmiteți
+                        voluntar atunci când ne contactați.
+                    </li>
+                </ul>
+
+            </section>
+
+
+            <section>
+
+                <h2>3. Cum colectăm datele</h2>
+
+                <p>
+                    Datele pot fi furnizate direct de dumneavoastră
+                    atunci când ne contactați telefonic sau prin alte
+                    mijloace de comunicare puse la dispoziție de
+                    operator.
+                </p>
+
+                <p>
+                    Site-ul nu permite, în forma sa actuală, plasarea
+                    și plata online a comenzilor.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>4. În ce scop folosim datele</h2>
+
+                <p>
+                    Datele cu caracter personal pot fi utilizate pentru:
+                </p>
+
+                <ul>
+                    <li>preluarea și confirmarea comenzilor;</li>
+                    <li>comunicarea cu clienții;</li>
+                    <li>
+                        stabilirea detaliilor privind ridicarea
+                        produselor;
+                    </li>
+                    <li>soluționarea solicitărilor sau reclamațiilor;</li>
+                    <li>
+                        îndeplinirea obligațiilor legale aplicabile
+                        operatorului.
+                    </li>
+                </ul>
+
+            </section>
+
+
+            <section>
+
+                <h2>5. Temeiul prelucrării</h2>
+
+                <p>
+                    În funcție de situație, prelucrarea datelor poate
+                    avea la bază efectuarea demersurilor necesare pentru
+                    încheierea sau executarea unui contract, îndeplinirea
+                    unei obligații legale, interesul legitim al
+                    operatorului sau consimțământul persoanei vizate,
+                    atunci când acesta este necesar.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>6. Cât timp păstrăm datele</h2>
+
+                <p>
+                    Datele sunt păstrate numai pentru perioada necesară
+                    îndeplinirii scopurilor pentru care au fost
+                    colectate și, după caz, pentru perioadele impuse
+                    de obligațiile legale aplicabile.
+                </p>
+
+                <p>
+                    Datele care nu mai sunt necesare vor fi șterse sau
+                    anonimizate, atunci când acest lucru este posibil
+                    și permis de lege.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>7. Cui putem transmite datele</h2>
+
+                <p>
+                    Datele nu sunt vândute către terți.
+                </p>
+
+                <p>
+                    În situațiile în care este necesar, anumite date
+                    pot fi transmise furnizorilor de servicii utilizați
+                    de operator, autorităților publice sau altor
+                    destinatari atunci când există o obligație ori un
+                    temei legal pentru aceasta.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>8. Drepturile dumneavoastră</h2>
+
+                <p>
+                    În condițiile prevăzute de legislația privind
+                    protecția datelor, puteți beneficia, după caz, de:
+                </p>
+
+                <ul>
+                    <li>dreptul de acces la date;</li>
+                    <li>dreptul la rectificarea datelor;</li>
+                    <li>dreptul la ștergerea datelor;</li>
+                    <li>dreptul la restricționarea prelucrării;</li>
+                    <li>dreptul la portabilitatea datelor;</li>
+                    <li>dreptul de opoziție;</li>
+                    <li>
+                        dreptul de a retrage consimțământul, atunci
+                        când prelucrarea se bazează pe consimțământ.
+                    </li>
+                </ul>
+
+            </section>
+
+
+            <section>
+
+                <h2>9. Reclamații privind datele personale</h2>
+
+                <p>
+                    Dacă apreciați că datele dumneavoastră au fost
+                    prelucrate cu încălcarea legislației aplicabile,
+                    aveți dreptul să vă adresați autorității competente
+                    pentru protecția datelor cu caracter personal.
+                </p>
+
+                <p>
+                    În România, autoritatea competentă este Autoritatea
+                    Națională de Supraveghere a Prelucrării Datelor cu
+                    Caracter Personal (ANSPDCP).
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>10. Securitatea datelor</h2>
+
+                <p>
+                    Luăm măsuri rezonabile pentru protejarea datelor
+                    împotriva accesului neautorizat, pierderii,
+                    modificării sau divulgării nepermise.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>11. Cookie-uri</h2>
+
+                <p>
+                    Informațiile privind tehnologiile de tip cookie
+                    utilizate pe site sunt prezentate separat în
+                    <a href="cookies.html">
+                        Politica de cookies
+                    </a>.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>12. Modificarea politicii</h2>
+
+                <p>
+                    Această politică poate fi actualizată periodic
+                    pentru a reflecta modificări ale site-ului,
+                    activității sau cerințelor legale.
+                </p>
+
+                <p>
+                    Versiunea actualizată va fi publicată pe această
+                    pagină.
+                </p>
+
+            </section>
+
+
+            <section>
+
+                <h2>13. Contact</h2>
+
+                <p>
+                    Pentru solicitări referitoare la protecția datelor
+                    cu caracter personal ne puteți contacta folosind
+                    datele de mai jos:
+                </p>
+
+                <p>
+                    <strong>Păstrăvăria – Din Inima Muntelui</strong>
+                    <br>
+                    Strada Toplița nr. 52B
+                    <br>
+                    Zărnești, Brașov
+                    <br><br>
+
+                    Telefon:
+                    <a href="tel:+40741078941">
+                        0741 078 941
+                    </a>
+                </p>
+
+            </section>
+
+
+        </div>
+
+    </div>
+
+
+    <footer class="legal-footer">
+
+        <p>
+            © 2026 Păstrăvăria · Din Inima Muntelui
+        </p>
+
+        <a href="index.html">
+            Înapoi la pagina principală →
+        </a>
+
+    </footer>
+
+</main>
+
+</body>
+
+</html>
